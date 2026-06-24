@@ -6,12 +6,19 @@
 <title>Maison NOTI — Traiteur Pizza &amp; Buffets sur-mesure | Vaucluse</title>
 <meta name="description" content="Maison NOTI, traiteur événementiel en Vaucluse. Pizzas cuites au four à bois mobile devant vos invités, buffets sur-mesure pour entreprises et particuliers. Devis gratuit.">
 
+<!-- Favicon & Theme -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#FBF6EF">
+<link rel="canonical" href="https://enzopizza.fr/traiteur.html">
+
 <!-- Open Graph -->
+<meta property="og:url" content="https://enzopizza.fr/traiteur.html">
 <meta property="og:title" content="Maison NOTI — Traiteur événementiel en Vaucluse">
 <meta property="og:description" content="Pizzas au four à bois mobile et buffets sur-mesure pour vos événements. Vice-championne de France de pizza à votre service.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Enzo Pizza & Maison NOTI">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -52,9 +59,9 @@
 <div class="scroll-progress"></div>
 
 <header class="site-header">
-  <nav class="container nav">
-    <a href="index.html" class="nav-logo">
-      <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <nav class="container nav" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo" aria-label="Enzo Pizza — Accueil">
+      <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M18 68 L52 16 L84 56 Q72 70 54 73 Q34 76 18 68 Z"/>
         <circle cx="44" cy="38" r="4.5" fill="#B5703A" stroke="none"/>
         <circle cx="60" cy="50" r="4" fill="#B5703A" stroke="none"/>
@@ -66,7 +73,7 @@
         <span>et Maison NOTI</span>
       </span>
     </a>
-    <button class="nav-toggle" aria-label="Menu">
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
@@ -75,7 +82,7 @@
       <a href="traiteur.html">Maison NOTI</a>
       <a href="galerie.html">Galerie</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.ubereats.com/fr" class="nav-cta" target="_blank" rel="noopener">Commander</a>
+      <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="nav-cta" target="_blank" rel="noopener">Commander</a>
     </div>
   </nav>
 </header>
@@ -87,17 +94,17 @@
     <div class="container">
       <div class="hero-split">
         <div class="reveal-left">
-          <span class="eyebrow">Maison NOTI &middot; Traiteur &eacute;v&eacute;nementiel</span>
+          <span class="eyebrow">Maison NOTI · Traiteur événementiel</span>
           <h1 class="mt-sm" style="margin-bottom: var(--space-sm);">
-            <span class="text-shimmer">Vos &eacute;v&eacute;nements m&eacute;ritent</span><br>
+            <span class="text-shimmer">Vos événements méritent</span><br>
             <span class="italic-display">l'exception</span>
           </h1>
           <div class="section-divider"></div>
           <p class="lede" style="max-width: 32em;">
-            Imaginez : un four &agrave; bois qui arrive chez vous, la p&acirc;te fa&ccedil;onn&eacute;e
-            sous les yeux de vos invit&eacute;s, le craquement de la cro&ucirc;te dor&eacute;e,
-            le parfum du basilic frais. Ce n'est pas un r&ecirc;ve,
-            c'est Maison NOTI &mdash; le spectacle qui devient festin.
+            Imaginez : un four à bois qui arrive chez vous, la pâte façonnée
+            sous les yeux de vos invités, le craquement de la croûte dorée,
+            le parfum du basilic frais. Ce n'est pas un rêve,
+            c'est Maison NOTI — le spectacle qui devient festin.
           </p>
           <div style="display:flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap;">
             <a href="contact.html" class="btn btn-fill accent-olive">Demander un devis</a>
@@ -129,11 +136,11 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Nos formules</span>
-        <h2 class="mt-2xs"><span class="text-shimmer">Deux fa&ccedil;ons</span> <span class="italic-display">de recevoir</span></h2>
+        <h2 class="mt-2xs"><span class="text-shimmer">Deux façons</span> <span class="italic-display">de recevoir</span></h2>
         <div class="section-divider"></div>
       </div>
 
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+      <div class="dual-grid">
         <div class="offer-card card-glow reveal-scale">
           <div class="hero-img">
             <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
@@ -144,17 +151,17 @@
             <div class="img-overlay"></div>
           </div>
           <div class="offer-card-body">
-            <span class="tag-olive">D&egrave;s 30 personnes</span>
-            <h3 class="mt-sm">Pizza &agrave; domicile</h3>
+            <span class="tag-olive">Dès 30 personnes</span>
+            <h3 class="mt-sm">Pizza à domicile</h3>
             <p>
-              Cindy installe son four &agrave; bois mobile directement chez vous et transforme
-              votre jardin en pizzeria &agrave; ciel ouvert. La p&acirc;te est fa&ccedil;onn&eacute;e devant vos
-              convives, garnie sous leurs yeux, enfourn&eacute;e en 90 secondes &mdash; et le
-              spectacle est aussi d&eacute;licieux que le r&eacute;sultat.
+              Cindy installe son four à bois mobile directement chez vous et transforme
+              votre jardin en pizzeria à ciel ouvert. La pâte est façonnée devant vos
+              convives, garnie sous leurs yeux, enfournée en 90 secondes — et le
+              spectacle est aussi délicieux que le résultat.
             </p>
             <p style="margin-top: var(--space-sm);">
               <strong style="color: var(--ink);">Tout est inclus :</strong> transport &amp;
-              installation du four, p&acirc;te fra&icirc;che, ingr&eacute;dients, cuisson minute,
+              installation du four, pâte fraîche, ingrédients, cuisson minute,
               service et nettoyage complet.
             </p>
           </div>
@@ -173,14 +180,14 @@
             <span class="tag-olive">Sur-mesure</span>
             <h3 class="mt-sm">Buffet sur-mesure</h3>
             <p>
-              S&eacute;minaires, lancements de produit, mariages, anniversaires &mdash; nous
-              composons un menu unique adapt&eacute; &agrave; votre budget, au nombre de convives
-              et &agrave; vos pr&eacute;f&eacute;rences culinaires. Formule par personne ou par groupe,
+              Séminaires, lancements de produit, mariages, anniversaires — nous
+              composons un menu unique adapté à votre budget, au nombre de convives
+              et à vos préférences culinaires. Formule par personne ou par groupe,
               toujours avec des produits frais et de saison.
             </p>
             <p style="margin-top: var(--space-sm);">
-              <strong style="color: var(--ink);">En option :</strong> d&eacute;coration de table,
-              nappage, verrerie &mdash; pour une r&eacute;ception cl&eacute; en main sans aucun stress.
+              <strong style="color: var(--ink);">En option :</strong> décoration de table,
+              nappage, verrerie — pour une réception clé en main sans aucun stress.
             </p>
           </div>
         </div>
@@ -200,11 +207,11 @@
   <section>
     <div class="container">
       <div class="section-head text-center mx-auto reveal" style="max-width: 30em;">
-        <span class="eyebrow">Comment &ccedil;a marche</span>
-        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">De votre id&eacute;e</span> <span class="italic-display">&agrave; votre table</span></h2>
+        <span class="eyebrow">Comment ça marche</span>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">De votre idée</span> <span class="italic-display">à votre table</span></h2>
         <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
         <p class="lede mx-auto mt-sm" style="text-align: center;">
-          Quatre &eacute;tapes, z&eacute;ro prise de t&ecirc;te. Vous r&ecirc;vez, on r&eacute;alise.
+          Quatre étapes, zéro prise de tête. Vous rêvez, on réalise.
         </p>
       </div>
 
@@ -212,22 +219,22 @@
         <div class="step-card reveal">
           <span class="step-num">01</span>
           <h3>Racontez-nous</h3>
-          <p>Appelez ou &eacute;crivez-nous : date, lieu, nombre d'invit&eacute;s, ambiance souhait&eacute;e. On &eacute;coute tout.</p>
+          <p>Appelez ou écrivez-nous : date, lieu, nombre d'invités, ambiance souhaitée. On écoute tout.</p>
         </div>
         <div class="step-card reveal">
           <span class="step-num">02</span>
           <h3>Devis sur-mesure</h3>
-          <p>Sous 48 heures, vous recevez une proposition d&eacute;taill&eacute;e adapt&eacute;e &agrave; votre projet et votre budget.</p>
+          <p>Sous 48 heures, vous recevez une proposition détaillée adaptée à votre projet et votre budget.</p>
         </div>
         <div class="step-card reveal">
           <span class="step-num">03</span>
-          <h3>On g&egrave;re tout</h3>
+          <h3>On gère tout</h3>
           <p>Le jour J, on arrive, on installe, on cuisine, on sert, on range. Vous ne levez pas le petit doigt.</p>
         </div>
         <div class="step-card reveal">
           <span class="step-num">04</span>
-          <h3>Vos invit&eacute;s r&eacute;gal&eacute;s</h3>
-          <p>Des pizzas fra&icirc;ches, des sourires partout, et des souvenirs que vos convives n'oublieront pas.</p>
+          <h3>Vos invités régalés</h3>
+          <p>Des pizzas fraîches, des sourires partout, et des souvenirs que vos convives n'oublieront pas.</p>
         </div>
       </div>
     </div>
@@ -250,19 +257,19 @@
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
-          <span class="feature-num">01 &mdash; Authenticit&eacute;</span>
-          <h3>M&ecirc;me p&acirc;te, m&ecirc;me four</h3>
-          <p>La m&ecirc;me p&acirc;te &agrave; fermentation lente 48h que dans notre pizzeria, cuite dans un vrai four &agrave; bois &mdash; simplement transport&eacute; jusque chez vous. Aucun compromis sur la qualit&eacute;.</p>
+          <span class="feature-num">01 — Authenticité</span>
+          <h3>Même pâte, même four</h3>
+          <p>La même pâte à fermentation lente 48h que dans notre pizzeria, cuite dans un vrai four à bois — simplement transporté jusque chez vous. Aucun compromis sur la qualité.</p>
         </div>
         <div class="feature-card reveal">
-          <span class="feature-num">02 &mdash; Championne</span>
+          <span class="feature-num">02 — Championne</span>
           <h3>Le savoir-faire de Cindy</h3>
-          <p>Vice-championne de France de pizza, Cindy apporte sa rigueur, sa cr&eacute;ativit&eacute; et son &eacute;nergie communicative &agrave; chacun de vos &eacute;v&eacute;nements. Un spectacle autant qu'un repas.</p>
+          <p>Vice-championne de France de pizza, Cindy apporte sa rigueur, sa créativité et son énergie communicative à chacun de vos événements. Un spectacle autant qu'un repas.</p>
         </div>
         <div class="feature-card reveal">
-          <span class="feature-num">03 &mdash; Cl&eacute; en main</span>
-          <h3>Z&eacute;ro stress</h3>
-          <p>De l'installation du four au nettoyage final, nous g&eacute;rons l'int&eacute;gralit&eacute; de la prestation. Votre seule mission : profiter de vos invit&eacute;s et du spectacle.</p>
+          <span class="feature-num">03 — Clé en main</span>
+          <h3>Zéro stress</h3>
+          <p>De l'installation du four au nettoyage final, nous gérons l'intégralité de la prestation. Votre seule mission : profiter de vos invités et du spectacle.</p>
         </div>
       </div>
     </div>
@@ -281,7 +288,7 @@
     <div class="container">
       <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 30em;">
         <span class="eyebrow">Infos pratiques</span>
-        <h2 class="mt-2xs mx-auto">Bon <span class="italic-display">&agrave; savoir</span></h2>
+        <h2 class="mt-2xs mx-auto">Bon <span class="italic-display">à savoir</span></h2>
       </div>
       <div class="info-trio">
         <div class="info-trio-item reveal">
@@ -290,11 +297,11 @@
         </div>
         <div class="info-trio-item reveal">
           <span class="eyebrow">Minimum convives</span>
-          <p>30 personnes<br>pour la formule pizza &agrave; domicile</p>
+          <p>30 personnes<br>pour la formule pizza à domicile</p>
         </div>
         <div class="info-trio-item reveal">
           <span class="eyebrow">Contact direct</span>
-          <p><a href="tel:0669471123" style="color: var(--camel-deep);">06 69 47 11 23</a><br>R&eacute;ponse sous 48h</p>
+          <p><a href="tel:0669471123" style="color: var(--camel-deep);">06 69 47 11 23</a><br>Réponse sous 48h</p>
         </div>
       </div>
 
@@ -323,7 +330,7 @@
             <span>et Maison NOTI</span>
           </span>
         </a>
-        <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines &agrave; fermentation lente et p&acirc;tes fra&icirc;ches faites maison, &agrave; L'Isle-sur-la-Sorgue.</p>
+        <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines à fermentation lente et pâtes fraîches faites maison, à L'Isle-sur-la-Sorgue.</p>
       </div>
       <div class="footer-col">
         <h4>Enzo Pizza</h4>
@@ -343,12 +350,14 @@
         <a href="traiteur.html">Maison NOTI</a>
         <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener">Uber Eats</a>
+        <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" target="_blank" rel="noopener">Uber Eats</a>
+        <a href="https://www.instagram.com/enzopizza84800/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/Enzopizza84800/" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Enzo Pizza &amp; Maison NOTI &mdash; Tous droits r&eacute;serv&eacute;s</span>
-      <span>SIRET Pizzeria 943 130 278 &middot; SIRET Traiteur 810 422 634 0016</span>
+      <span>© 2026 Enzo Pizza &amp; Maison NOTI — Tous droits réservés</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>

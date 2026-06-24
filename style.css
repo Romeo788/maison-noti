@@ -582,6 +582,11 @@ section.tight-bottom { padding-bottom: 0; }
   .gallery-item.tall { grid-row: span 1; }
 }
 
+/* Show captions on touch devices (no hover) */
+@media (hover: none) {
+  .gallery-caption { opacity: 1; transform: translateY(0); }
+}
+
 /* ---------- MENU (pizzeria) ---------- */
 .menu-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-2xl); align-items: start; }
 @media (max-width: 900px) { .menu-layout { grid-template-columns: 1fr; gap: var(--space-md); } }
@@ -843,7 +848,8 @@ section.tight-bottom { padding-bottom: 0; }
 
 .reveal.visible .section-divider,
 .reveal-left.visible .section-divider,
-.reveal-right.visible .section-divider {
+.reveal-right.visible .section-divider,
+.page-hero .section-divider {
   transform: scaleX(1);
 }
 
@@ -911,9 +917,11 @@ img {
   transform-origin: left;
 }
 
-/* Responsive dual grid */
+/* Responsive grids */
+.dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.story-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-2xl); align-items: center; }
 @media (max-width: 860px) {
-  div[style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
+  .dual-grid, .story-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- SMOOTH PAGE TRANSITION ---------- */

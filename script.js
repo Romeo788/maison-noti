@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelector('.nav-links');
   if (toggle && links) {
     toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
+      const isOpen = toggle.classList.toggle('open');
       links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
     });
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
@@ -98,23 +99,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- Contact form: submit simulation ---- */
+  /* ---- Contact form: AJAX submit via Web3Forms ---- */
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
-      btn.textContent = 'Message envoy\u00e9 !';
-      btn.style.background = 'var(--olive)';
+
+      if (btn.disabled) return;
       btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-        if (devisFields) devisFields.style.display = 'none';
-      }, 3000);
+      btn.textContent = 'Envoi en cours\u2026';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          btn.textContent = 'Message envoy\u00e9 !';
+          btn.style.background = 'var(--olive)';
+          form.reset();
+          if (devisFields) devisFields.style.display = 'none';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 4000);
+        } else {
+          throw new Error(data.message);
+        }
+      } catch {
+        btn.textContent = 'Erreur \u2014 r\u00e9essayez';
+        btn.style.background = 'var(--blush)';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }
     });
   }
 
@@ -131,7 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = el.getBoundingClientRect();
             if (rect.bottom > 0 && rect.top < window.innerHeight) {
               const offset = (scrollY - el.offsetTop) * speed;
-              el.style.transform = `translateY(${offset}px)`;
+              const img = el.querySelector('img');
+              if (img) {
+                img.style.transform = `translateY(${offset}px) scale(1.03)`;
+              }
             }
           });
           ticking = false;

@@ -13,6 +13,13 @@
 <meta property="og:description" content="Pizzas napolitaines artisanales à fermentation lente 48h, pâtes fraîches faites maison, et service traiteur événementiel en Vaucluse.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Enzo Pizza & Maison NOTI">
+
+<!-- Favicon & Theme -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#FBF6EF">
+<link rel="canonical" href="https://enzopizza.fr/">
+<meta property="og:url" content="https://enzopizza.fr/">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,19 +52,34 @@
   "telephone": "+33490202120",
   "servesCuisine": ["Pizza napolitaine", "Pâtes fraîches", "Cuisine italienne"],
   "priceRange": "€€",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "18:30",
+      "closes": "22:00"
+    }
+  ],
   "hasMenu": {
     "@type": "Menu",
-    "url": "pizzeria.html"
+    "url": "https://enzopizza.fr/pizzeria.html"
   },
-  "sameAs": []
+  "sameAs": [
+    "https://www.instagram.com/enzopizza84800/",
+    "https://www.facebook.com/Enzopizza84800/"
+  ]
 }
 </script>
 </head>
 <body class="grain">
+
+<div class="scroll-progress"></div>
 
 <header class="site-header">
   <nav class="container nav" role="navigation" aria-label="Navigation principale">
@@ -83,7 +105,7 @@
       <a href="traiteur.html">Maison NOTI</a>
       <a href="galerie.html">Galerie</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.ubereats.com/fr" class="nav-cta" target="_blank" rel="noopener">Commander</a>
+      <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="nav-cta" target="_blank" rel="noopener">Commander</a>
     </div>
   </nav>
 </header>
@@ -96,21 +118,20 @@
       <div class="hero-split">
 
         <div class="reveal-left">
-          <span class="eyebrow">L'Isle-sur-la-Sorgue · Pizzeria &amp; p&acirc;tes fra&icirc;ches</span>
+          <span class="eyebrow">L'Isle-sur-la-Sorgue · Pizzeria &amp; pâtes fraîches</span>
           <div class="section-divider" style="margin-top: var(--space-xs);"></div>
           <h1 class="mt-sm" style="margin-bottom: var(--space-sm);">
             <span class="text-shimmer">Vivre d'amour</span><br>
             <span class="italic-display">et de pizzas</span>
           </h1>
           <p class="lede" style="max-width: 32em;">
-            Chaque pizza commence par un geste simple : une p&acirc;te fa&ccedil;onn&eacute;e &agrave; la main,
-            un pr&eacute;ferment de 48 heures minimum, et des produits s&eacute;lectionn&eacute;s avec soin.
-            Chez Enzo Pizza, c'est Cindy &mdash; vice-championne de France &mdash; qui fait de
-            chaque bouch&eacute;e un moment &agrave; part.
+            Une pâte qui a reposé deux jours. Des produits qu'on ne choisit pas par hasard.
+            Et les mains de Cindy — vice-championne de France — qui transforment tout ça
+            en quelque chose qui vous arrête à la première bouchée.
           </p>
           <div style="display:flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap;">
-            <a href="pizzeria.html" class="btn btn-fill">D&eacute;couvrir la carte</a>
-            <a href="traiteur.html" class="btn btn-outline accent-olive">Maison NOTI &mdash; Traiteur</a>
+            <a href="pizzeria.html" class="btn btn-fill">Découvrir la carte</a>
+            <a href="traiteur.html" class="btn btn-outline accent-olive">Maison NOTI — Traiteur</a>
           </div>
           <div style="display:flex; gap: var(--space-lg); margin-top: var(--space-lg);">
             <div>
@@ -130,7 +151,7 @@
 
         <div class="reveal-right hero-img hero-img-glow img-tilt" style="aspect-ratio: 4/5; min-height: 420px;" data-parallax="0.08">
           <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80"
-               alt="Pizza napolitaine artisanale garnie de mozzarella, tomates fra&icirc;ches et basilic"
+               alt="Pizza napolitaine artisanale garnie de mozzarella, tomates fraîches et basilic"
                width="800" height="1000" loading="eager">
           <div class="img-overlay"></div>
         </div>
@@ -150,7 +171,7 @@
   <!-- ===== L'HISTOIRE DE CINDY ===== -->
   <section class="bg-deep" style="padding-top: var(--space-2xl);">
     <div class="container">
-      <div style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-2xl); align-items:center;">
+      <div class="story-grid">
         <div class="reveal-scale hero-img" style="aspect-ratio: 4/5; min-height: 380px;">
           <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80"
                alt="Cindy façonnant la pâte à pizza — vice-championne de France"
@@ -162,10 +183,10 @@
           <h2 class="mt-sm"><span class="text-shimmer">Le parcours</span> <span class="italic-display">de Cindy</span></h2>
           <div class="section-divider"></div>
           <p class="lede mt-md">
-            Ancienne serveuse, Cindy a tout quitté pour suivre sa passion. Deux formations
-            déterminantes — chez <strong style="color: var(--ink);">Ludovic Bicchiera</strong>,
-            puis chez <strong style="color: var(--ink);">John Berg</strong> — et six mois
-            plus tard, les titres s'enchaînent :
+            Elle était serveuse. Un jour, elle a décidé que ce serait elle derrière le four.
+            Formée par <strong style="color: var(--ink);">Ludovic Bicchiera</strong>
+            puis <strong style="color: var(--ink);">John Berg</strong>, Cindy n'a pas mis
+            longtemps à prouver que ce n'était pas un caprice :
           </p>
           <ul style="list-style: none; margin-top: var(--space-sm); display: flex; flex-direction: column; gap: 0.6rem;">
             <li style="display: flex; align-items: baseline; gap: 0.6rem;">
@@ -182,9 +203,9 @@
             </li>
           </ul>
           <p class="lede mt-md">
-            Au-delà des titres, une vraie passion pour la cuisine et les produits l'amène
-            à développer les pâtes fraîches — gnocchis, raviolis, et bientôt d'autres
-            créations — toujours dans cette quête d'un produit juste et sincère.
+            Mais Cindy ne s'est pas arrêtée aux pizzas. Gnocchis, raviolis, pâtes fraîches —
+            chaque matin, elle repart de zéro avec la même obsession :
+            que le produit soit juste. Pas parfait sur Instagram. Juste bon.
           </p>
         </div>
       </div>
@@ -194,25 +215,25 @@
   <!-- ===== DEUX UNIVERS ===== -->
   <section class="bg-deep tight-top">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="eyebrow">Deux univers, une même exigence</span>
-        <h2 class="mt-2xs"><span class="text-shimmer">Un lieu,</span> <span class="italic-display">deux &acirc;mes</span></h2>
+        <h2 class="mt-2xs"><span class="text-shimmer">Un lieu,</span> <span class="italic-display">deux âmes</span></h2>
         <div class="section-divider"></div>
       </div>
 
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+      <div class="dual-grid">
         <div class="dual-card card-glow reveal">
           <div class="hero-img" style="aspect-ratio: 16/10;">
             <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=700&q=80"
-                 alt="Four &agrave; bois artisanal &mdash; pizzeria Enzo Pizza"
+                 alt="Four à bois artisanal — pizzeria Enzo Pizza"
                  width="700" height="437" loading="lazy">
           </div>
           <div class="dual-card-body">
             <span class="feature-num" style="color: var(--camel-deep);">01 — Tous les jours</span>
             <h3 class="mt-2xs">Enzo Pizza</h3>
             <p>
-              Pizzas napolitaines, gnocchis et raviolis frais, pétris avec soin chaque matin.
-              Sur place en terrasse, à emporter, ou livrés via Uber Eats.
+              La pizzeria du quotidien. Pâte pétrie chaque matin, garnitures choisies
+              avec soin, cuisson au feu de bois. En terrasse, à emporter, ou via Uber Eats.
             </p>
             <a href="pizzeria.html" class="btn btn-outline btn-sm mt-sm" style="display:inline-flex;">Voir la carte</a>
           </div>
@@ -221,15 +242,15 @@
         <div class="dual-card card-glow reveal">
           <div class="hero-img" style="aspect-ratio: 16/10;">
             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&q=80"
-                 alt="Buffet traiteur Maison NOTI &mdash; &eacute;v&eacute;nement en plein air"
+                 alt="Buffet traiteur Maison NOTI — événement en plein air"
                  width="700" height="437" loading="lazy">
           </div>
           <div class="dual-card-body">
             <span class="feature-num" style="color: var(--olive);">02 — Sur réservation</span>
             <h3 class="mt-2xs">Maison NOTI</h3>
             <p>
-              Pizzas cuites à domicile dès 30 convives, buffets sur-mesure pour
-              entreprises et événements privés. Décoration de table en option.
+              Le traiteur qui vient chez vous. Un four à bois mobile, des pizzas
+              façonnées devant vos invités, des buffets pensés pour chaque occasion.
             </p>
             <a href="traiteur.html" class="btn btn-outline accent-olive btn-sm mt-sm" style="display:inline-flex;">Demander un devis</a>
           </div>
@@ -248,12 +269,12 @@
   <!-- ===== LE SECRET DE LA PÂTE ===== -->
   <section class="bg-ink">
     <div class="container">
-      <div class="section-head text-center mx-auto" style="margin-bottom: var(--space-lg); max-width: 36em;">
+      <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 36em;">
         <span class="eyebrow">Notre savoir-faire</span>
-        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">Ce qui ne se voit pas,</span> <span class="italic-display">se go&ucirc;te</span></h2>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">Ce qui ne se voit pas,</span> <span class="italic-display">se goûte</span></h2>
         <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
         <p class="lede mx-auto mt-sm" style="text-align: center;">
-          Derrière chaque pizza, il y a un processus que l'on ne brusque pas.
+          Le secret d'une bonne pizza, c'est tout ce qui se passe avant qu'elle arrive dans votre assiette.
         </p>
       </div>
       <div class="feature-grid">
@@ -295,9 +316,9 @@
   <!-- ===== INFOS PRATIQUES ===== -->
   <section>
     <div class="container">
-      <div class="section-head text-center mx-auto" style="margin-bottom: var(--space-lg); max-width: 30em;">
+      <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 30em;">
         <span class="eyebrow">Venez nous voir</span>
-        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">L'essentiel</span> <span class="italic-display">en un coup d'oeil</span></h2>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">L'essentiel</span> <span class="italic-display">en un coup d'œil</span></h2>
         <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
       </div>
       <div class="info-trio">
@@ -355,17 +376,19 @@
         <a href="tel:0669471123">06 69 47 11 23</a>
       </div>
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h4>Liens</h4>
         <a href="pizzeria.html">Notre carte</a>
-        <a href="traiteur.html">Traiteur</a>
+        <a href="traiteur.html">Maison NOTI</a>
         <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener">Uber Eats</a>
+        <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" target="_blank" rel="noopener">Uber Eats</a>
+        <a href="https://www.instagram.com/enzopizza84800/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/Enzopizza84800/" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Enzo Pizza &amp; Maison NOTI — Tous droits réservés</span>
-      <span>SIRET Pizzeria 943 130 278 · SIRET Traiteur 810 422 634 0016</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>
