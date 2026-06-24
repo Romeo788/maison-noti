@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison NOTI — Traiteur Pizza &amp; Buffets sur-mesure | Vaucluse</title>
+<meta name="description" content="Maison NOTI, traiteur événementiel en Vaucluse. Pizzas cuites au four à bois mobile devant vos invités, buffets sur-mesure pour entreprises et particuliers. Devis gratuit.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Maison NOTI — Traiteur événementiel en Vaucluse">
+<meta property="og:description" content="Pizzas au four à bois mobile et buffets sur-mesure pour vos événements. Vice-championne de France de pizza à votre service.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CateringService",
+  "name": "Maison NOTI",
+  "description": "Service traiteur événementiel — pizzas au four à bois mobile et buffets sur-mesure en Vaucluse",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "98 Route de l'Isle-sur-la-Sorgue",
+    "addressLocality": "Le Thor",
+    "postalCode": "84250",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33669471123",
+  "areaServed": "Vaucluse, Provence"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* Page-specific: hero image aspect ratio */
+  .traiteur-hero-img { aspect-ratio: 4/5; min-height: 420px; }
+  @media (max-width: 860px) { .traiteur-hero-img { min-height: 320px; aspect-ratio: 16/10; } }
+
+  /* Page-specific: offer card image */
+  .offer-card .hero-img { border-radius: 0; }
+  .offer-card .hero-img img { aspect-ratio: 16/10; }
+</style>
+</head>
+<body class="grain">
+
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="nav-logo">
+      <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 68 L52 16 L84 56 Q72 70 54 73 Q34 76 18 68 Z"/>
+        <circle cx="44" cy="38" r="4.5" fill="#B5703A" stroke="none"/>
+        <circle cx="60" cy="50" r="4" fill="#B5703A" stroke="none"/>
+        <circle cx="38" cy="56" r="3.5" fill="#B5703A" stroke="none"/>
+        <path d="M16 67 Q40 80 58 71" stroke="#B5703A" stroke-width="3"/>
+      </svg>
+      <span class="logo-text">
+        <strong>Enzo Pizza</strong>
+        <span>et Maison NOTI</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="pizzeria.html">Enzo Pizza</a>
+      <a href="traiteur.html">Maison NOTI</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.ubereats.com/fr" class="nav-cta" target="_blank" rel="noopener">Commander</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-split">
+        <div class="reveal-left">
+          <span class="eyebrow">Maison NOTI &middot; Traiteur &eacute;v&eacute;nementiel</span>
+          <h1 class="mt-sm" style="margin-bottom: var(--space-sm);">
+            <span class="text-shimmer">Vos &eacute;v&eacute;nements m&eacute;ritent</span><br>
+            <span class="italic-display">l'exception</span>
+          </h1>
+          <div class="section-divider"></div>
+          <p class="lede" style="max-width: 32em;">
+            Imaginez : un four &agrave; bois qui arrive chez vous, la p&acirc;te fa&ccedil;onn&eacute;e
+            sous les yeux de vos invit&eacute;s, le craquement de la cro&ucirc;te dor&eacute;e,
+            le parfum du basilic frais. Ce n'est pas un r&ecirc;ve,
+            c'est Maison NOTI &mdash; le spectacle qui devient festin.
+          </p>
+          <div style="display:flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-fill accent-olive">Demander un devis</a>
+            <a href="tel:0669471123" class="btn btn-outline accent-olive">06 69 47 11 23</a>
+          </div>
+        </div>
+
+        <div class="reveal-right hero-img hero-img-glow img-tilt traiteur-hero-img">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80"
+               alt="Buffet traiteur Maison NOTI avec assortiment de plats pour un événement"
+               loading="eager"
+               width="1200" height="1500">
+          <div class="img-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP -->
+  <div class="ticket-strip from-bg to-deep">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- NOS FORMULES -->
+  <section class="bg-deep">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Nos formules</span>
+        <h2 class="mt-2xs"><span class="text-shimmer">Deux fa&ccedil;ons</span> <span class="italic-display">de recevoir</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+        <div class="offer-card card-glow reveal-scale">
+          <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+                 alt="Pizza napolitaine sortant du four à bois mobile Maison NOTI"
+                 loading="lazy"
+                 width="800" height="500"
+                 style="aspect-ratio: 16/10;">
+            <div class="img-overlay"></div>
+          </div>
+          <div class="offer-card-body">
+            <span class="tag-olive">D&egrave;s 30 personnes</span>
+            <h3 class="mt-sm">Pizza &agrave; domicile</h3>
+            <p>
+              Cindy installe son four &agrave; bois mobile directement chez vous et transforme
+              votre jardin en pizzeria &agrave; ciel ouvert. La p&acirc;te est fa&ccedil;onn&eacute;e devant vos
+              convives, garnie sous leurs yeux, enfourn&eacute;e en 90 secondes &mdash; et le
+              spectacle est aussi d&eacute;licieux que le r&eacute;sultat.
+            </p>
+            <p style="margin-top: var(--space-sm);">
+              <strong style="color: var(--ink);">Tout est inclus :</strong> transport &amp;
+              installation du four, p&acirc;te fra&icirc;che, ingr&eacute;dients, cuisson minute,
+              service et nettoyage complet.
+            </p>
+          </div>
+        </div>
+
+        <div class="offer-card card-glow reveal-scale">
+          <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+                 alt="Buffet gastronomique sur-mesure pour événement d'entreprise"
+                 loading="lazy"
+                 width="800" height="500"
+                 style="aspect-ratio: 16/10;">
+            <div class="img-overlay"></div>
+          </div>
+          <div class="offer-card-body">
+            <span class="tag-olive">Sur-mesure</span>
+            <h3 class="mt-sm">Buffet sur-mesure</h3>
+            <p>
+              S&eacute;minaires, lancements de produit, mariages, anniversaires &mdash; nous
+              composons un menu unique adapt&eacute; &agrave; votre budget, au nombre de convives
+              et &agrave; vos pr&eacute;f&eacute;rences culinaires. Formule par personne ou par groupe,
+              toujours avec des produits frais et de saison.
+            </p>
+            <p style="margin-top: var(--space-sm);">
+              <strong style="color: var(--ink);">En option :</strong> d&eacute;coration de table,
+              nappage, verrerie &mdash; pour une r&eacute;ception cl&eacute; en main sans aucun stress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP -->
+  <div class="ticket-strip from-deep to-bg flip">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- COMMENT CA MARCHE -->
+  <section>
+    <div class="container">
+      <div class="section-head text-center mx-auto reveal" style="max-width: 30em;">
+        <span class="eyebrow">Comment &ccedil;a marche</span>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">De votre id&eacute;e</span> <span class="italic-display">&agrave; votre table</span></h2>
+        <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
+        <p class="lede mx-auto mt-sm" style="text-align: center;">
+          Quatre &eacute;tapes, z&eacute;ro prise de t&ecirc;te. Vous r&ecirc;vez, on r&eacute;alise.
+        </p>
+      </div>
+
+      <div class="step-grid">
+        <div class="step-card reveal">
+          <span class="step-num">01</span>
+          <h3>Racontez-nous</h3>
+          <p>Appelez ou &eacute;crivez-nous : date, lieu, nombre d'invit&eacute;s, ambiance souhait&eacute;e. On &eacute;coute tout.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">02</span>
+          <h3>Devis sur-mesure</h3>
+          <p>Sous 48 heures, vous recevez une proposition d&eacute;taill&eacute;e adapt&eacute;e &agrave; votre projet et votre budget.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">03</span>
+          <h3>On g&egrave;re tout</h3>
+          <p>Le jour J, on arrive, on installe, on cuisine, on sert, on range. Vous ne levez pas le petit doigt.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">04</span>
+          <h3>Vos invit&eacute;s r&eacute;gal&eacute;s</h3>
+          <p>Des pizzas fra&icirc;ches, des sourires partout, et des souvenirs que vos convives n'oublieront pas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP -->
+  <div class="ticket-strip from-bg to-ink">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- POURQUOI NOUS CHOISIR -->
+  <section class="bg-ink">
+    <div class="container">
+      <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 36em;">
+        <span class="eyebrow">Pourquoi nous choisir</span>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">L'exigence Enzo Pizza,</span> <span class="italic-display">chez vous</span></h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <span class="feature-num">01 &mdash; Authenticit&eacute;</span>
+          <h3>M&ecirc;me p&acirc;te, m&ecirc;me four</h3>
+          <p>La m&ecirc;me p&acirc;te &agrave; fermentation lente 48h que dans notre pizzeria, cuite dans un vrai four &agrave; bois &mdash; simplement transport&eacute; jusque chez vous. Aucun compromis sur la qualit&eacute;.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-num">02 &mdash; Championne</span>
+          <h3>Le savoir-faire de Cindy</h3>
+          <p>Vice-championne de France de pizza, Cindy apporte sa rigueur, sa cr&eacute;ativit&eacute; et son &eacute;nergie communicative &agrave; chacun de vos &eacute;v&eacute;nements. Un spectacle autant qu'un repas.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-num">03 &mdash; Cl&eacute; en main</span>
+          <h3>Z&eacute;ro stress</h3>
+          <p>De l'installation du four au nettoyage final, nous g&eacute;rons l'int&eacute;gralit&eacute; de la prestation. Votre seule mission : profiter de vos invit&eacute;s et du spectacle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP -->
+  <div class="ticket-strip from-ink to-deep flip">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- INFOS PRATIQUES -->
+  <section class="bg-deep">
+    <div class="container">
+      <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 30em;">
+        <span class="eyebrow">Infos pratiques</span>
+        <h2 class="mt-2xs mx-auto">Bon <span class="italic-display">&agrave; savoir</span></h2>
+      </div>
+      <div class="info-trio">
+        <div class="info-trio-item reveal">
+          <span class="eyebrow">Zone d'intervention</span>
+          <p>Le Thor, L'Isle-sur-la-Sorgue<br>et tout le Vaucluse</p>
+        </div>
+        <div class="info-trio-item reveal">
+          <span class="eyebrow">Minimum convives</span>
+          <p>30 personnes<br>pour la formule pizza &agrave; domicile</p>
+        </div>
+        <div class="info-trio-item reveal">
+          <span class="eyebrow">Contact direct</span>
+          <p><a href="tel:0669471123" style="color: var(--camel-deep);">06 69 47 11 23</a><br>R&eacute;ponse sous 48h</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-lg reveal">
+        <a href="contact.html" class="btn btn-fill accent-olive" style="display:inline-flex;">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">
+          <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 68 L52 16 L84 56 Q72 70 54 73 Q34 76 18 68 Z"/>
+            <circle cx="44" cy="38" r="4.5" fill="#B5703A" stroke="none"/>
+            <circle cx="60" cy="50" r="4" fill="#B5703A" stroke="none"/>
+            <circle cx="38" cy="56" r="3.5" fill="#B5703A" stroke="none"/>
+            <path d="M16 67 Q40 80 58 71" stroke="#B5703A" stroke-width="3"/>
+          </svg>
+          <span class="logo-text">
+            <strong>Enzo Pizza</strong>
+            <span>et Maison NOTI</span>
+          </span>
+        </a>
+        <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines &agrave; fermentation lente et p&acirc;tes fra&icirc;ches faites maison, &agrave; L'Isle-sur-la-Sorgue.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enzo Pizza</h4>
+        <p>271 Cours Fernande Peyre</p>
+        <p>84800 L'Isle-sur-la-Sorgue</p>
+        <a href="tel:0490202120">04 90 20 21 20</a>
+      </div>
+      <div class="footer-col">
+        <h4>Maison NOTI</h4>
+        <p>98 Route de l'Isle-sur-la-Sorgue</p>
+        <p>84250 Le Thor</p>
+        <a href="tel:0669471123">06 69 47 11 23</a>
+      </div>
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <a href="pizzeria.html">Notre carte</a>
+        <a href="traiteur.html">Maison NOTI</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener">Uber Eats</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Enzo Pizza &amp; Maison NOTI &mdash; Tous droits r&eacute;serv&eacute;s</span>
+      <span>SIRET Pizzeria 943 130 278 &middot; SIRET Traiteur 810 422 634 0016</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

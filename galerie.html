@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie — Enzo Pizza &amp; Maison NOTI | L'Isle-sur-la-Sorgue</title>
+<meta name="description" content="Plongez dans l'univers d'Enzo Pizza et Maison NOTI en images : pizzas napolitaines au feu de bois, pâtes fraîches artisanales, réceptions traiteur et concours internationaux à L'Isle-sur-la-Sorgue.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Galerie — Enzo Pizza & Maison NOTI">
+<meta property="og:description" content="De la terrasse ensoleillée aux concours internationaux, découvrez en images notre passion pour la pizza napolitaine et la cuisine italienne artisanale.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=80">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Enzo Pizza & Maison NOTI">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Gallery-specific: image aspect ratios for masonry layout */
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-item.tall img { aspect-ratio: 3/4; }
+.gallery-item.wide img { aspect-ratio: 16/9; }
+.gallery-item:not(.tall):not(.wide) img { aspect-ratio: 4/3; }
+
+/* Dark section placeholder overrides */
+.bg-ink .gallery-item img { background: rgba(251, 246, 239, 0.06); }
+</style>
+</head>
+<body class="grain">
+
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="nav-logo">
+      <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 68 L52 16 L84 56 Q72 70 54 73 Q34 76 18 68 Z"/>
+        <circle cx="44" cy="38" r="4.5" fill="#B5703A" stroke="none"/>
+        <circle cx="60" cy="50" r="4" fill="#B5703A" stroke="none"/>
+        <circle cx="38" cy="56" r="3.5" fill="#B5703A" stroke="none"/>
+        <path d="M16 67 Q40 80 58 71" stroke="#B5703A" stroke-width="3"/>
+      </svg>
+      <span class="logo-text">
+        <strong>Enzo Pizza</strong>
+        <span>et Maison NOTI</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="pizzeria.html">Enzo Pizza</a>
+      <a href="traiteur.html">Maison NOTI</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.ubereats.com/fr" class="nav-cta" target="_blank" rel="noopener">Commander</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">En images</span>
+        <h1><span class="text-shimmer">L'univers Enzo Pizza</span> <span class="italic-display">en images</span></h1>
+        <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
+        <p class="lede mx-auto" style="text-align: center;">
+          De la terrasse ensoleill&eacute;e aux concours internationaux, plongez dans notre quotidien — l&agrave; o&ugrave; la passion devient saveur.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP: bg -> deep -->
+  <div class="ticket-strip from-bg to-deep">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- =============================================
+       SECTION 1 — ENZO PIZZA
+       ============================================= -->
+  <section class="bg-deep">
+    <div class="container">
+      <div class="section-head reveal-left">
+        <span class="eyebrow">La pizzeria</span>
+        <h2 class="mt-2xs"><span class="text-shimmer">Enzo Pizza,</span> <span class="italic-display">au fil des jours</span></h2>
+        <div class="section-divider"></div>
+        <p class="lede mt-sm">Fermentation lente, produits s&eacute;lectionn&eacute;s avec soin et le savoir-faire d'une vice-championne de France — chaque pizza raconte une histoire.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Tall — Pizza making -->
+        <div class="gallery-item tall reveal" data-category="pizzeria">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80"
+               alt="Pizzaiola fa&ccedil;onnant la p&acirc;te &agrave; pizza napolitaine"
+               loading="lazy" width="600" height="800">
+          <div class="gallery-caption">
+            <div class="caption-title">L'art du fa&ccedil;onnage</div>
+            <div class="caption-sub">Enzo Pizza</div>
+          </div>
+        </div>
+
+        <!-- 2. Margherita -->
+        <div class="gallery-item reveal" data-category="pizzeria">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80"
+               alt="Pizza margherita fra&icirc;chement sortie du four"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Margherita classique</div>
+            <div class="caption-sub">Fermentation 48h</div>
+          </div>
+        </div>
+
+        <!-- 3. Pizza close up -->
+        <div class="gallery-item reveal" data-category="pizzeria">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"
+               alt="Gros plan sur une pizza garnie de basilic frais"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Basilic &amp; mozzarella</div>
+            <div class="caption-sub">Sp&eacute;cialit&eacute; maison</div>
+          </div>
+        </div>
+
+        <!-- 4. Wide — Restaurant terrace -->
+        <div class="gallery-item wide reveal-scale" data-category="pizzeria">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+               alt="Terrasse du restaurant Enzo Pizza &agrave; L'Isle-sur-la-Sorgue"
+               loading="lazy" width="800" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">La terrasse d'Enzo</div>
+            <div class="caption-sub">L'Isle-sur-la-Sorgue</div>
+          </div>
+        </div>
+
+        <!-- 5. Wood fire oven -->
+        <div class="gallery-item reveal" data-category="pizzeria">
+          <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&q=80"
+               alt="Four &agrave; bois artisanal en pleine cuisson"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Le four &agrave; bois</div>
+            <div class="caption-sub">Cuisson artisanale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP: deep -> bg -->
+  <div class="ticket-strip from-deep to-bg flip">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- =============================================
+       SECTION 2 — PATES FRAICHES
+       ============================================= -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal-right">
+        <span class="eyebrow">Fait maison, chaque jour</span>
+        <h2 class="mt-2xs"><span class="text-shimmer">P&acirc;tes fra&icirc;ches</span> <span class="italic-display">&amp; cr&eacute;ations du jour</span></h2>
+        <div class="section-divider"></div>
+        <p class="lede mt-sm">Gnocchis, raviolis et tagliatelles, fa&ccedil;onn&eacute;s &agrave; la main chaque matin avec la m&ecirc;me passion et la m&ecirc;me exigence qu'en Italie.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Gnocchi -->
+        <div class="gallery-item reveal" data-category="pates">
+          <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?w=600&q=80"
+               alt="Gnocchis faits maison pr&ecirc;ts &agrave; cuire"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Gnocchis maison</div>
+            <div class="caption-sub">Pr&eacute;paration du jour</div>
+          </div>
+        </div>
+
+        <!-- 2. Ravioli -->
+        <div class="gallery-item reveal" data-category="pates">
+          <img src="https://images.unsplash.com/photo-1587740908075-9e245070dfaa?w=600&q=80"
+               alt="Raviolis frais &agrave; la ricotta et &eacute;pinards"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Raviolis ricotta-&eacute;pinards</div>
+            <div class="caption-sub">Fait main</div>
+          </div>
+        </div>
+
+        <!-- 3. Tall — Pasta prep -->
+        <div class="gallery-item tall reveal" data-category="pates">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80"
+               alt="Pr&eacute;paration des p&acirc;tes fra&icirc;ches en cuisine"
+               loading="lazy" width="600" height="800">
+          <div class="gallery-caption">
+            <div class="caption-title">En cuisine</div>
+            <div class="caption-sub">P&acirc;tes fra&icirc;ches du jour</div>
+          </div>
+        </div>
+
+        <!-- 4. Pasta dish -->
+        <div class="gallery-item reveal" data-category="pates">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80"
+               alt="Assiette de p&acirc;tes fra&icirc;ches sauce tomate basilic"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">P&acirc;tes sauce tomate</div>
+            <div class="caption-sub">&Agrave; la carte</div>
+          </div>
+        </div>
+
+        <!-- 5. Fresh pasta -->
+        <div class="gallery-item reveal" data-category="pates">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80"
+               alt="P&acirc;tes fra&icirc;ches sur plan de travail farin&eacute;"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">L'art de la pasta</div>
+            <div class="caption-sub">Fait main</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP: bg -> ink -->
+  <div class="ticket-strip from-bg to-ink">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- =============================================
+       SECTION 3 — MAISON NOTI / EVENEMENTS (dark)
+       ============================================= -->
+  <section class="bg-ink">
+    <div class="container">
+      <div class="section-head reveal-left">
+        <span class="eyebrow">Maison NOTI</span>
+        <h2 class="mt-2xs"><span class="text-shimmer">&Eacute;v&eacute;nements</span> <span class="italic-display">&amp; r&eacute;ceptions</span></h2>
+        <p class="lede mt-sm">Mariages, anniversaires, soir&eacute;es d'entreprise — Maison NOTI se d&eacute;place avec son four mobile pour transformer chaque &eacute;v&eacute;nement en f&ecirc;te italienne.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Wide — Outdoor event -->
+        <div class="gallery-item wide reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80"
+               alt="R&eacute;ception en plein air avec buffet italien"
+               loading="lazy" width="800" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">R&eacute;ception en plein air</div>
+            <div class="caption-sub">Maison NOTI</div>
+          </div>
+        </div>
+
+        <!-- 2. Fine dining -->
+        <div class="gallery-item reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+               alt="Service de table gastronomique lors d'une r&eacute;ception priv&eacute;e"
+               loading="lazy" width="600" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">Service &agrave; table</div>
+            <div class="caption-sub">Soir&eacute;e priv&eacute;e</div>
+          </div>
+        </div>
+
+        <!-- 3. Table setting -->
+        <div class="gallery-item reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=600&q=80"
+               alt="D&eacute;coration de table &eacute;l&eacute;gante pour mariage"
+               loading="lazy" width="600" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">D&eacute;coration sur-mesure</div>
+            <div class="caption-sub">Option &eacute;v&eacute;nement</div>
+          </div>
+        </div>
+
+        <!-- 4. Food platter -->
+        <div class="gallery-item reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80"
+               alt="Plateau de sp&eacute;cialit&eacute;s italiennes pour buffet traiteur"
+               loading="lazy" width="600" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">Buffet italien</div>
+            <div class="caption-sub">D&egrave;s 30 personnes</div>
+          </div>
+        </div>
+
+        <!-- 5. Pizza at event -->
+        <div class="gallery-item reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1529543544282-ea57407bc2e3?w=600&q=80"
+               alt="Pizzas artisanales servies lors d'un &eacute;v&eacute;nement priv&eacute;"
+               loading="lazy" width="600" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">Pizzas sur place</div>
+            <div class="caption-sub">Service traiteur</div>
+          </div>
+        </div>
+
+        <!-- 6. Friends eating -->
+        <div class="gallery-item reveal" data-category="traiteur">
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80"
+               alt="Convives partageant un repas lors d'une f&ecirc;te en plein air"
+               loading="lazy" width="600" height="450"
+               style="background: rgba(251, 246, 239, 0.06);">
+          <div class="gallery-caption">
+            <div class="caption-title">Moments de partage</div>
+            <div class="caption-sub">Convivialit&eacute;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKET STRIP: ink -> deep -->
+  <div class="ticket-strip from-ink to-deep flip">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="strip-base" width="1200" height="28"/>
+      <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
+    </svg>
+  </div>
+
+  <!-- =============================================
+       SECTION 4 — CONCOURS DE CINDY
+       ============================================= -->
+  <section class="bg-deep">
+    <div class="container">
+      <div class="section-head reveal-right">
+        <span class="eyebrow">Parcours &amp; distinctions</span>
+        <h2 class="mt-2xs"><span class="text-shimmer">Les concours</span> <span class="italic-display">de Cindy</span></h2>
+        <div class="section-divider"></div>
+        <p class="lede mt-sm">Vice-championne de France f&eacute;minine, vice-championne de France toutes cat&eacute;gories et 4<sup>e</sup> au championnat du monde — un parcours d'exception en images.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Pizza competition -->
+        <div class="gallery-item reveal" data-category="concours">
+          <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600&q=80"
+               alt="Cindy en pleine concentration lors d'un concours de pizza"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Championnat de France</div>
+            <div class="caption-sub">Vice-championne</div>
+          </div>
+        </div>
+
+        <!-- 2. Pizza making contest -->
+        <div class="gallery-item reveal" data-category="concours">
+          <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&q=80"
+               alt="Fa&ccedil;onnage de p&acirc;te en comp&eacute;tition internationale"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">L'&eacute;preuve du fa&ccedil;onnage</div>
+            <div class="caption-sub">Comp&eacute;tition 2025</div>
+          </div>
+        </div>
+
+        <!-- 3. Pizza award -->
+        <div class="gallery-item reveal" data-category="concours">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80"
+               alt="Pizza de comp&eacute;tition au championnat du monde de Menton"
+               loading="lazy" width="600" height="450">
+          <div class="gallery-caption">
+            <div class="caption-title">Championnat du monde</div>
+            <div class="caption-sub">4<sup>e</sup> — Pizza dessert &amp; calzone</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-lg reveal-scale">
+        <p class="lede mx-auto" style="text-align:center; margin-bottom: var(--space-md);">
+          Envie de go&ucirc;ter le savoir-faire d'une championne ? Passez nous voir ou commandez en ligne.
+        </p>
+        <div style="display:flex; gap: var(--space-sm); justify-content:center; flex-wrap:wrap;">
+          <a href="pizzeria.html" class="btn btn-fill">D&eacute;couvrir la carte</a>
+          <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">
+          <svg class="slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B5703A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 68 L52 16 L84 56 Q72 70 54 73 Q34 76 18 68 Z"/>
+            <circle cx="44" cy="38" r="4.5" fill="#B5703A" stroke="none"/>
+            <circle cx="60" cy="50" r="4" fill="#B5703A" stroke="none"/>
+            <circle cx="38" cy="56" r="3.5" fill="#B5703A" stroke="none"/>
+            <path d="M16 67 Q40 80 58 71" stroke="#B5703A" stroke-width="3"/>
+          </svg>
+          <span class="logo-text">
+            <strong>Enzo Pizza</strong>
+            <span>et Maison NOTI</span>
+          </span>
+        </a>
+        <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines &agrave; fermentation lente et p&acirc;tes fra&icirc;ches faites maison, &agrave; L'Isle-sur-la-Sorgue.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enzo Pizza</h4>
+        <p>271 Cours Fernande Peyre</p>
+        <p>84800 L'Isle-sur-la-Sorgue</p>
+        <a href="tel:0490202120">04 90 20 21 20</a>
+      </div>
+      <div class="footer-col">
+        <h4>Maison NOTI</h4>
+        <p>98 Route de l'Isle-sur-la-Sorgue</p>
+        <p>84250 Le Thor</p>
+        <a href="tel:0669471123">06 69 47 11 23</a>
+      </div>
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <a href="pizzeria.html">Notre carte</a>
+        <a href="traiteur.html">Maison NOTI</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener">Uber Eats</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Enzo Pizza &amp; Maison NOTI — Tous droits r&eacute;serv&eacute;s</span>
+      <span>SIRET Pizzeria 943 130 278 &middot; SIRET Traiteur 810 422 634 0016</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

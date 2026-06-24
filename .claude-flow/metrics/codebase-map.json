@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-22T16:08:04.433Z",
+  "projectRoot": "/Users/romeopinet/enzopizza",
+  "structure": {
+    "hasPackageJson": false,
+    "hasTsConfig": false,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1782144484433
+}
