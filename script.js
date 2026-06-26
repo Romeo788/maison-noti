@@ -143,9 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- Parallax subtle on hero images ---- */
+  /* ---- Parallax subtle on hero images (desktop only — transforms break iOS compositing) ---- */
   const parallaxEls = document.querySelectorAll('[data-parallax]');
-  if (parallaxEls.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const isDesktop = window.matchMedia('(min-width: 861px) and (hover: hover)').matches;
+  if (parallaxEls.length && isDesktop && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
@@ -223,9 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => counterObserver.observe(counter));
   }
 
-  /* ---- Add hover effect to cards with mouse follow ---- */
+  /* ---- Add hover effect to cards with mouse follow (desktop only) ---- */
   const tiltCards = document.querySelectorAll('.img-tilt');
-  tiltCards.forEach(card => {
+  if (!window.matchMedia('(hover: hover)').matches) { /* skip on touch devices */ }
+  else tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;

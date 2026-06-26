@@ -47,7 +47,8 @@
 <style>
   /* Page-specific: hero image aspect ratio */
   .traiteur-hero-img { aspect-ratio: 4/5; min-height: 420px; }
-  @media (max-width: 860px) { .traiteur-hero-img { min-height: 320px; aspect-ratio: 16/10; } }
+  @media (max-width: 860px) { .traiteur-hero-img { min-height: 280px; aspect-ratio: 16/10; } }
+  @media (max-width: 540px) { .traiteur-hero-img { min-height: 220px; } }
 
   /* Page-specific: offer card image */
   .offer-card .hero-img { border-radius: 0; }
@@ -106,7 +107,7 @@
             le parfum du basilic frais. Ce n'est pas un rêve,
             c'est Maison NOTI — le spectacle qui devient festin.
           </p>
-          <div style="display:flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap;">
+          <div class="btn-group" style="display:flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap;">
             <a href="contact.html" class="btn btn-fill accent-olive">Demander un devis</a>
             <a href="tel:0669471123" class="btn btn-outline accent-olive">06 69 47 11 23</a>
           </div>

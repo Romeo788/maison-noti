@@ -59,6 +59,16 @@
   .info-bar { display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap; padding: var(--space-sm) 0; font-size: 0.85rem; color: var(--ink-soft); }
   .info-bar-item { display: flex; align-items: center; gap: 0.45rem; }
   .info-bar-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--camel); flex-shrink: 0; }
+
+  @media (max-width: 860px) {
+    .hero-banner { max-height: 320px; margin-bottom: var(--space-md); }
+    .hero-banner img { height: 320px; }
+  }
+  @media (max-width: 540px) {
+    .hero-banner { max-height: 220px; margin-bottom: var(--space-sm); }
+    .hero-banner img { height: 220px; }
+    .info-bar { flex-direction: column; gap: var(--space-sm); align-items: center; }
+  }
 </style>
 </head>
 <body class="grain">
@@ -99,7 +109,7 @@
       <h1 class="mt-sm reveal" style="margin-bottom: var(--space-sm);"><span class="text-shimmer">Des pizzas qui ont du</span> <span class="italic-display">caractère</span></h1>
       <div class="section-divider"></div>
       <p class="lede reveal" style="max-width: 40em;">Deux jours de repos pour la pâte. Des produits qu'on ne négocie pas. Et le savoir-faire d'une vice-championne de France derrière chaque pizza. Sur place, à emporter, ou livrées via Uber Eats.</p>
-      <div class="reveal" style="display:flex; gap:var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap; align-items:center;">
+      <div class="reveal btn-group" style="display:flex; gap:var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap; align-items:center;">
         <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="btn btn-fill" target="_blank" rel="noopener">Commander sur Uber Eats</a>
         <span class="tag-outline">Pas de livraison hors Uber Eats</span>
         <span class="tag-outline">Réservation conseillée</span>
@@ -252,7 +262,7 @@
 
   <!-- Terrasse & Récompenses -->
   <section class="bg-deep">
-    <div class="container dual-grid" style="gap: var(--space-2xl); align-items:start;">
+    <div class="container dual-grid dual-grid-loose">
       <div class="reveal-left">
         <span class="eyebrow">Terrasse</span>
         <h2 class="mt-2xs"><span class="text-shimmer">Ouverte dès</span> <span class="italic-display">les beaux jours</span></h2>

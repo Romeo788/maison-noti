@@ -4,3 +4,4 @@ ruvector.db
 .env.*
 node_modules/
 .vercel/
+.vercel
