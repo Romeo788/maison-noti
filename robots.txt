@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://enzopizza.fr/sitemap.xml
+Sitemap: https://maison-noti.com/sitemap.xml
