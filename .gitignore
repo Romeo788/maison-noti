@@ -1,0 +1,6 @@
+.claude-flow/
+ruvector.db
+.env
+.env.*
+node_modules/
+.vercel/

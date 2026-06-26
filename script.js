@@ -169,26 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  /* ---- Staggered reveal for menu items ---- */
-  const menuItems = document.querySelectorAll('.menu-item');
-  if (menuItems.length && 'IntersectionObserver' in window) {
-    const menuObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateX(0)';
-          menuObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
-
-    menuItems.forEach((item, i) => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateX(-8px)';
-      item.style.transition = `opacity 0.4s ${i * 0.03}s var(--ease-out-expo), transform 0.4s ${i * 0.03}s var(--ease-out-expo)`;
-      menuObserver.observe(item);
-    });
-  }
+  /* ---- Menu categories: simple fade-in per category ---- */
 
   /* ---- Scroll progress bar ---- */
   const scrollProgress = document.querySelector('.scroll-progress');
