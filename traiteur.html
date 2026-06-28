@@ -28,15 +28,17 @@
   "@type": "CateringService",
   "name": "Maison NOTI",
   "description": "Service traiteur événementiel — pizzas au four à bois mobile et buffets sur-mesure en Vaucluse",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "98 Route de l'Isle-sur-la-Sorgue",
-    "addressLocality": "Le Thor",
-    "postalCode": "84250",
-    "addressCountry": "FR"
-  },
   "telephone": "+33669471123",
-  "areaServed": "Vaucluse, Provence"
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.88,
+      "longitude": 5.13
+    },
+    "geoRadius": "50000",
+    "name": "Luberon, Vaucluse et alentours"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -305,7 +307,7 @@
       <div class="info-trio">
         <div class="info-trio-item reveal">
           <span class="eyebrow">Zone d'intervention</span>
-          <p>Le Thor, L'Isle-sur-la-Sorgue<br>et tout le Vaucluse</p>
+          <p>Luberon, Vaucluse<br>et alentours</p>
         </div>
         <div class="info-trio-item reveal">
           <span class="eyebrow">Minimum convives</span>
@@ -352,8 +354,7 @@
       </div>
       <div class="footer-col">
         <h4>Maison NOTI</h4>
-        <p>98 Route de l'Isle-sur-la-Sorgue</p>
-        <p>84250 Le Thor</p>
+        <p>Luberon et alentours</p>
         <a href="tel:0669471123">06 69 47 11 23</a>
       </div>
       <div class="footer-col">
