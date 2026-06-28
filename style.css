@@ -1015,7 +1015,7 @@ main {
 
   /* Hero images go landscape on mobile */
   .hero-img-portrait { min-height: 280px; aspect-ratio: 16/10; }
-  .hero-img-story { min-height: 260px; aspect-ratio: 16/10; }
+  .hero-img-story { min-height: 260px; aspect-ratio: 3/4; }
   .hero-img-story img { object-position: top; }
 
   /* story-grid gap */
