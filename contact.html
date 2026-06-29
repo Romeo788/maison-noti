@@ -22,20 +22,56 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Enzo Pizza & Maison NOTI">
 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Enzo Pizza & Maison NOTI | L'Isle-sur-la-Sorgue">
+<meta name="twitter:description" content="Réservation pizzeria et devis traiteur événementiel à L'Isle-sur-la-Sorgue. Réponse sous 48h.">
+<meta name="twitter:image" content="https://maison-noti.com/img/pizza-truffe-roquette.jpg">
+
 <!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://maison-noti.com/#restaurant",
   "name": "Enzo Pizza & Maison NOTI",
+  "description": "Pizzeria napolitaine artisanale et service traiteur événementiel à L'Isle-sur-la-Sorgue, Vaucluse.",
+  "url": "https://maison-noti.com/",
+  "image": "https://maison-noti.com/img/pizza-margherita-pesto.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "271 Cours Fernande Peyre",
     "addressLocality": "L'Isle-sur-la-Sorgue",
     "postalCode": "84800",
+    "addressRegion": "Vaucluse",
     "addressCountry": "FR"
   },
-  "telephone": "+33490202120"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.9205,
+    "longitude": 5.0505
+  },
+  "telephone": "+33490202120",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Friday","Saturday","Sunday"],
+      "opens": "17:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Thursday"],
+      "opens": "17:00",
+      "closes": "21:30"
+    }
+  ],
+  "priceRange": "€€",
+  "acceptsReservations": true,
+  "sameAs": [
+    "https://www.instagram.com/enzopizza84800/",
+    "https://www.facebook.com/Enzopizza84800/"
+  ]
 }
 </script>
 <script type="application/ld+json">

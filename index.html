@@ -17,6 +17,12 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Enzo Pizza & Maison NOTI">
 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enzo Pizza & Maison NOTI — Pizzas napolitaines à L'Isle-sur-la-Sorgue">
+<meta name="twitter:description" content="Pizzas napolitaines artisanales à fermentation lente 48h, pâtes fraîches faites maison. Vice-championne de France 2025.">
+<meta name="twitter:image" content="https://maison-noti.com/img/pizza-margherita-pesto.jpg">
+
 <!-- Favicon & Theme -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -37,14 +43,24 @@
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://maison-noti.com/#restaurant",
   "name": "Enzo Pizza",
   "alternateName": "Enzo Pizza & Maison NOTI",
-  "image": "https://maison-noti.com/img/pizza-margherita-pesto.jpg",
+  "description": "Pizzeria napolitaine artisanale à L'Isle-sur-la-Sorgue. Pizzas à fermentation lente 48h, pâtes fraîches faites maison. Vice-championne de France 2025, Gault & Millau 2026.",
+  "url": "https://maison-noti.com/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://maison-noti.com/img/pizza-margherita-pesto.jpg",
+    "width": 1200,
+    "height": 1158,
+    "caption": "Pizza margherita au pesto frais — Enzo Pizza, L'Isle-sur-la-Sorgue"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "271 Cours Fernande Peyre",
     "addressLocality": "L'Isle-sur-la-Sorgue",
     "postalCode": "84800",
+    "addressRegion": "Vaucluse",
     "addressCountry": "FR"
   },
   "geo": {
@@ -55,6 +71,10 @@
   "telephone": "+33490202120",
   "servesCuisine": ["Pizza napolitaine", "Pâtes fraîches", "Cuisine italienne"],
   "priceRange": "€€",
+  "acceptsReservations": true,
+  "paymentAccepted": "Cash, Credit Card",
+  "currenciesAccepted": "EUR",
+  "award": ["Gault & Millau 2026", "Vice-championne de France de pizza napolitaine 2025"],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -92,6 +112,68 @@
     "url": "https://maison-noti.com/",
     "logo": "https://maison-noti.com/favicon.svg"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Enzo Pizza — Accueil",
+      "item": "https://maison-noti.com/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Où se trouve Enzo Pizza à L'Isle-sur-la-Sorgue ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enzo Pizza est situé au 271 Cours Fernande Peyre, 84800 L'Isle-sur-la-Sorgue, au cœur du centre-ville. La pizzeria se trouve sur le cours principal, facilement accessible à pied ou en voiture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les horaires d'ouverture d'Enzo Pizza ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enzo Pizza est ouvert 7 jours sur 7. Du mardi au dimanche de 17h à 22h, le lundi et le jeudi de 17h à 21h30. La réservation est fortement conseillée, surtout le week-end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Enzo Pizza livre-t-il à domicile ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, Enzo Pizza propose la livraison à domicile via Uber Eats. Vous pouvez aussi venir retirer votre commande directement à la pizzeria au 271 Cours Fernande Peyre, L'Isle-sur-la-Sorgue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on réserver une table chez Enzo Pizza ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, la réservation est fortement conseillée, en particulier le vendredi, samedi et dimanche. Appelez le 04 90 20 21 20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Maison NOTI se déplace-t-elle pour les événements ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, Maison NOTI est le service traiteur d'Enzo Pizza. L'équipe se déplace dans tout le Luberon et le Vaucluse avec un four à bois mobile pour les mariages, anniversaires et événements d'entreprise."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -136,9 +218,9 @@
       <div class="hero-split">
 
         <div class="reveal-left">
-          <span class="eyebrow">L'Isle-sur-la-Sorgue · Pizzeria &amp; pâtes fraîches</span>
-          <div class="section-divider" style="margin-top: var(--space-xs);"></div>
           <h1 class="mt-sm" style="margin-bottom: var(--space-sm);">
+            <span class="eyebrow" style="display:block; margin-bottom: var(--space-xs);">Enzo Pizza — Pizzeria à L'Isle-sur-la-Sorgue</span>
+            <span class="section-divider" style="display:block; margin-bottom: var(--space-xs);"></span>
             <span class="text-shimmer">Vivre d'amour</span><br>
             <span class="italic-display">et de pizzas</span>
           </h1>
@@ -326,6 +408,33 @@
       <g class="notch"><circle cx="14" cy="0" r="10"/><circle cx="44" cy="0" r="10"/><circle cx="74" cy="0" r="10"/><circle cx="104" cy="0" r="10"/><circle cx="134" cy="0" r="10"/><circle cx="164" cy="0" r="10"/><circle cx="194" cy="0" r="10"/><circle cx="224" cy="0" r="10"/><circle cx="254" cy="0" r="10"/><circle cx="284" cy="0" r="10"/><circle cx="314" cy="0" r="10"/><circle cx="344" cy="0" r="10"/><circle cx="374" cy="0" r="10"/><circle cx="404" cy="0" r="10"/><circle cx="434" cy="0" r="10"/><circle cx="464" cy="0" r="10"/><circle cx="494" cy="0" r="10"/><circle cx="524" cy="0" r="10"/><circle cx="554" cy="0" r="10"/><circle cx="584" cy="0" r="10"/><circle cx="614" cy="0" r="10"/><circle cx="644" cy="0" r="10"/><circle cx="674" cy="0" r="10"/><circle cx="704" cy="0" r="10"/><circle cx="734" cy="0" r="10"/><circle cx="764" cy="0" r="10"/><circle cx="794" cy="0" r="10"/><circle cx="824" cy="0" r="10"/><circle cx="854" cy="0" r="10"/><circle cx="884" cy="0" r="10"/><circle cx="914" cy="0" r="10"/><circle cx="944" cy="0" r="10"/><circle cx="974" cy="0" r="10"/><circle cx="1004" cy="0" r="10"/><circle cx="1034" cy="0" r="10"/><circle cx="1064" cy="0" r="10"/><circle cx="1094" cy="0" r="10"/><circle cx="1124" cy="0" r="10"/><circle cx="1154" cy="0" r="10"/><circle cx="1184" cy="0" r="10"/></g>
     </svg>
   </div>
+
+  <!-- ===== FAQ ===== -->
+  <section>
+    <div class="container" style="max-width: 48em;">
+      <div class="section-head text-center mx-auto reveal" style="margin-bottom: var(--space-lg); max-width: 30em;">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2 class="mt-2xs mx-auto"><span class="text-shimmer">Tout savoir</span> <span class="italic-display">sur Enzo Pizza</span></h2>
+        <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
+      </div>
+      <div class="legal-content reveal">
+        <h3>Où se trouve Enzo Pizza à L'Isle-sur-la-Sorgue ?</h3>
+        <p>Enzo Pizza est situé au 271 Cours Fernande Peyre, 84800 L'Isle-sur-la-Sorgue, au cœur du centre-ville. La pizzeria se trouve sur le cours principal, facilement accessible à pied ou en voiture.</p>
+
+        <h3>Quels sont les horaires d'ouverture ?</h3>
+        <p>Enzo Pizza est ouvert 7 jours sur 7. Du mardi au dimanche de 17h à 22h, le lundi et le jeudi de 17h à 21h30. Nous vous recommandons de réserver, surtout le week-end.</p>
+
+        <h3>Enzo Pizza livre-t-il à domicile ?</h3>
+        <p>Oui, Enzo Pizza propose la livraison à domicile via <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" target="_blank" rel="noopener" style="color: var(--camel-deep);">Uber Eats</a>. Vous pouvez aussi venir retirer votre commande directement à la pizzeria.</p>
+
+        <h3>Peut-on réserver une table ?</h3>
+        <p>Oui, la réservation est fortement conseillée, en particulier le vendredi, samedi et dimanche. Appelez-nous au <a href="tel:0490202120" style="color: var(--camel-deep);">04 90 20 21 20</a>.</p>
+
+        <h3>Maison NOTI se déplace-t-elle pour les événements ?</h3>
+        <p>Oui, Maison NOTI est le service traiteur d'Enzo Pizza. Nous nous déplaçons dans tout le Luberon et le Vaucluse avec notre four à bois mobile pour vos mariages, anniversaires et événements d'entreprise. <a href="/traiteur" style="color: var(--camel-deep);">En savoir plus</a>.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== INFOS PRATIQUES ===== -->
   <section>
