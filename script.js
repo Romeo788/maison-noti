@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---- Active nav link ---- */
-  const current = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname;
   document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a => {
     a.classList.remove('active');
     const href = a.getAttribute('href');
-    if (href === current || (current === '' && href === 'index.html')) {
+    if (href === path || (path === '/' && href === '/')) {
       a.classList.add('active');
     }
   });
@@ -96,6 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const val = sujetSelect.value;
       const showDevis = ['devis-traiteur', 'evenement-prive', 'evenement-entreprise'].includes(val);
       devisFields.style.display = showDevis ? 'block' : 'none';
+    });
+  }
+
+  /* ---- Google Maps click-to-load (RGPD) ---- */
+  const mapPlaceholder = document.getElementById('map-placeholder');
+  if (mapPlaceholder) {
+    const loadMap = () => {
+      const container = mapPlaceholder.parentElement;
+      container.innerHTML = '<iframe src="https://maps.google.com/maps?q=271+Cours+Fernande+Peyre,+84800+L\'Isle-sur-la-Sorgue,+France&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Enzo Pizza — 271 Cours Fernande Peyre, L\'Isle-sur-la-Sorgue"></iframe>';
+    };
+    mapPlaceholder.addEventListener('click', loadMap);
+    mapPlaceholder.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadMap(); }
     });
   }
 
