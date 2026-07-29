@@ -148,7 +148,8 @@
     <div class="container">
       <div class="menu-layout">
         <nav class="menu-nav reveal-left" aria-label="Catégories de la carte">
-          <a href="#rouges" class="menu-nav-item active" data-target="rouges"><span>Pizzas rouges</span><span class="count">21</span></a>
+          <a href="#moment" class="menu-nav-item active" data-target="moment"><span>Pizzas du moment</span><span class="count">4</span></a>
+          <a href="#rouges" class="menu-nav-item" data-target="rouges"><span>Pizzas rouges</span><span class="count">21</span></a>
           <a href="#blanches" class="menu-nav-item" data-target="blanches"><span>Pizzas blanches</span><span class="count">4</span></a>
           <a href="#pates" class="menu-nav-item" data-target="pates"><span>Pâtes fraîches</span><span class="count">7</span></a>
           <a href="#plats" class="menu-nav-item" data-target="plats"><span>À partager</span><span class="count">3</span></a>
@@ -156,6 +157,72 @@
         </nav>
 
         <div>
+          <!-- =========================================================
+               PIZZAS DU MOMENT — à mettre à jour au fil des saisons.
+               Ajouter / retirer une pizza = dupliquer ou supprimer un bloc
+               <article class="moment-card">. Penser à ajuster le compteur
+               de la nav ci-dessus (<span class="count">).
+               ========================================================= -->
+          <div class="menu-category reveal" id="moment">
+            <div class="menu-category-head"><h2>Pizzas du moment</h2><span class="menu-cat-note">créations éphémères</span></div>
+
+            <p class="moment-intro">Quelques semaines par an seulement. Cindy sort de la carte et compose autour des produits de saison — dès qu'ils quittent le marché, la pizza quitte l'ardoise. <strong>Prix affichés en salle.</strong></p>
+
+            <div class="moment-grid">
+              <article class="moment-card">
+                <div class="moment-card-media">
+                  <img src="img/pizza-figues-framboises.jpg"
+                       alt="Pizza sur base crème garnie de figues rôties, framboises, mûres et jambon cru"
+                       width="1200" height="1331" loading="lazy">
+                </div>
+                <div class="moment-card-body">
+                  <span class="badge badge-moment">Fin d'été</span>
+                  <h3 class="moment-card-name">Figues &amp; framboises</h3>
+                  <p class="moment-card-desc">Base crème, mozzarella fior di latte, jambon cru, figues rôties, framboises et mûres fraîches.</p>
+                </div>
+              </article>
+
+              <article class="moment-card">
+                <div class="moment-card-media">
+                  <img src="img/pizza-melon-prosciutto.jpg"
+                       alt="Pizza garnie de billes de melon, tomates cerises, mesclun, mozzarella et jambon cru"
+                       width="1200" height="1592" loading="lazy">
+                </div>
+                <div class="moment-card-body">
+                  <span class="badge badge-moment">Été</span>
+                  <h3 class="moment-card-name">Melon &amp; prosciutto</h3>
+                  <p class="moment-card-desc">Sauce tomate, mesclun, billes de melon, tomates cerises, perles de mozzarella, jambon cru, pesto.</p>
+                </div>
+              </article>
+
+              <article class="moment-card">
+                <div class="moment-card-media">
+                  <img src="img/pizza-petits-pois.jpg"
+                       alt="Pizza à la crème de petits pois avec guanciale croustillant et perles de mozzarella"
+                       width="1200" height="1592" loading="lazy">
+                </div>
+                <div class="moment-card-body">
+                  <span class="badge badge-moment">Printemps</span>
+                  <h3 class="moment-card-name">Petits pois &amp; guanciale</h3>
+                  <p class="moment-card-desc">Crème de petits pois, petits pois frais, guanciale croustillant, perles de mozzarella, olives taggiasche.</p>
+                </div>
+              </article>
+
+              <article class="moment-card">
+                <div class="moment-card-media">
+                  <img src="img/pizza-mortadelle-truffe.jpg"
+                       alt="Pizza à la crème de truffe, mortadelle, stracciatella et lamelles de truffe fraîche"
+                       width="1200" height="1570" loading="lazy">
+                </div>
+                <div class="moment-card-body">
+                  <span class="badge badge-moment">Automne</span>
+                  <h3 class="moment-card-name">Mortadelle &amp; truffe</h3>
+                  <p class="moment-card-desc">Crème de truffe, mortadelle, stracciatella, lamelles de truffe fraîche.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
           <!-- Pizzas rouges -->
           <div class="menu-category reveal" id="rouges">
             <div class="menu-category-head"><h2>Pizzas rouges</h2><span class="menu-cat-note">base sauce tomate</span></div>
@@ -232,7 +299,7 @@
 
             <div class="menu-item"><div><div class="menu-item-name">Raviolis frais</div><p class="menu-item-desc">À découvrir sur l'ardoise ! Une recette selon les envies du chef. <strong style="color:var(--ink);">Prix selon composition.</strong></p></div><div class="menu-item-price">—</div></div>
 
-            <div class="menu-item"><div><div class="menu-item-name">Pâtes fraîches au détail</div><p class="menu-item-desc">Pâtes fraîches crues, à emporter pour les cuisiner chez vous.</p></div><div class="menu-item-price">0,99 € / 100g</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Gnocchis au détail</div><p class="menu-item-desc">Gnocchis frais crus, à emporter pour les cuisiner chez vous.</p></div><div class="menu-item-price">0,99 € / 100g</div></div>
           </div>
 
           <!-- À partager -->
