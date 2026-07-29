@@ -694,6 +694,40 @@ section.tight-bottom { padding-bottom: 0; }
 .moment-card-name { font-size: 1.15rem; line-height: 1.3; }
 .moment-card-desc { color: var(--ink-soft); font-size: 0.875rem; line-height: 1.6; }
 
+/* ---------- DISPONIBILITÉ DES PIZZAS DU MOMENT ---------- */
+/* Les classes .est-dispo / .hors-saison sont posées par script.js à partir
+   de l'attribut data-mois. État par défaut (JS absent) : rien ne change,
+   la carte s'affiche normalement — aucun contenu n'est masqué. */
+
+/* Disponible : on garde le remplissage camel-deep, on ajoute une pastille.
+   C'est le seul badge plein de la grille, les autres passent en outline. */
+.badge-dispo {
+  background: var(--camel-deep); color: var(--paper);
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.badge-dispo::before {
+  content: ""; width: 0.4rem; height: 0.4rem;
+  border-radius: 50%; background: var(--paper); flex-shrink: 0;
+}
+
+/* Hors saison : mention discrète, pas un badge d'accent. */
+.badge-attente {
+  background: transparent; color: var(--ink);
+  border: 1px solid rgba(31, 22, 16, 0.18); font-weight: 600;
+}
+
+.moment-card.hors-saison { opacity: 0.72; border-color: rgba(31, 22, 16, 0.10); }
+/* La description repasse en --ink : combinée à l'opacité 0.72 de la carte,
+   elle retombe à ~7:1 sur le fond papier, donc au-dessus du seuil AA.
+   Laisser --ink-soft sous opacité l'aurait fait tomber à 3,7:1. */
+.moment-card.hors-saison .moment-card-desc { color: var(--ink); }
+.moment-card.hors-saison .moment-card-media { filter: saturate(0.55); }
+/* Plus d'affordance de survol : ces pizzas ne sont pas commandables. */
+@media (hover: hover) {
+  .moment-card.hors-saison:hover { transform: none; box-shadow: none; }
+  .moment-card.hors-saison:hover .moment-card-media img { transform: none; }
+}
+
 .supplements { margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1.5px solid var(--ink); display: flex; gap: var(--space-md) var(--space-xl); flex-wrap: wrap; font-size: 0.875rem; }
 .supplements .eyebrow { display: block; width: 100%; margin-bottom: var(--space-2xs); }
 .supplements strong { color: var(--ink); font-family: var(--font-display); }

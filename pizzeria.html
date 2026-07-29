@@ -159,9 +159,21 @@
         <div>
           <!-- =========================================================
                PIZZAS DU MOMENT — à mettre à jour au fil des saisons.
+
                Ajouter / retirer une pizza = dupliquer ou supprimer un bloc
                <article class="moment-card">. Penser à ajuster le compteur
                de la nav ci-dessus (<span class="count">).
+
+               ---- QUELLE PIZZA EST À L'ARDOISE ? ----
+               Chaque carte porte un attribut data-mois : la liste des mois
+               où la pizza est proposée (1 = janvier … 12 = décembre).
+               Exemple : data-mois="6,7,8" = juin, juillet, août.
+
+               Le site compare ce mois-ci à cette liste et affiche tout seul
+               soit « À l'ardoise en ce moment », soit « Reviendra … ».
+               Pour changer une période : modifiez juste les chiffres.
+               Rien d'autre à toucher. Les mêmes valeurs sont à reporter sur
+               l'accueil (index.html), section « Les pizzas du moment ».
                ========================================================= -->
           <div class="menu-category reveal" id="moment">
             <div class="menu-category-head"><h2>Pizzas du moment</h2><span class="menu-cat-note">créations éphémères</span></div>
@@ -169,7 +181,7 @@
             <p class="moment-intro">Quelques semaines par an seulement. Cindy sort de la carte et compose autour des produits de saison — dès qu'ils quittent le marché, la pizza quitte l'ardoise. <strong>Prix affichés en salle.</strong></p>
 
             <div class="moment-grid">
-              <article class="moment-card">
+              <article class="moment-card" data-mois="8,9">
                 <div class="moment-card-media">
                   <img src="img/pizza-figues-framboises.jpg"
                        alt="Pizza sur base crème garnie de figues rôties, framboises, mûres et jambon cru"
@@ -182,7 +194,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="6,7,8">
                 <div class="moment-card-media">
                   <img src="img/pizza-melon-prosciutto.jpg"
                        alt="Pizza garnie de billes de melon, tomates cerises, mesclun, mozzarella et jambon cru"
@@ -195,7 +207,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="4,5,6">
                 <div class="moment-card-media">
                   <img src="img/pizza-petits-pois.jpg"
                        alt="Pizza à la crème de petits pois avec guanciale croustillant et perles de mozzarella"
@@ -208,7 +220,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="10,11,12">
                 <div class="moment-card-media">
                   <img src="img/pizza-mortadelle-truffe.jpg"
                        alt="Pizza à la crème de truffe, mortadelle, stracciatella et lamelles de truffe fraîche"

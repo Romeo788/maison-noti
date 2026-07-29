@@ -88,6 +88,65 @@ document.addEventListener('DOMContentLoaded', () => {
     menuCategories.forEach(cat => spyObserver.observe(cat));
   }
 
+  /* =================================================================
+     PIZZAS DU MOMENT — affichage automatique de la disponibilité
+     =================================================================
+     À LIRE MÊME SI VOUS NE CODEZ PAS :
+
+     Dans index.html et pizzeria.html, chaque pizza du moment porte
+     un attribut data-mois. Il contient les mois où la pizza est
+     proposée, en chiffres séparés par des virgules :
+       1 = janvier, 2 = février, 3 = mars, … 12 = décembre.
+
+     Exemple :  data-mois="6,7,8"   ->  juin, juillet, août.
+
+     Ce bloc compare le mois en cours à cette liste :
+       - le mois en cours y figure  ->  badge « À l'ardoise en ce moment »
+                                        et la pizza remonte en premier ;
+       - sinon                      ->  mention « Reviendra … », photo
+                                        atténuée, pas d'effet au survol.
+
+     POUR CHANGER LA PÉRIODE D'UNE PIZZA : il suffit de modifier les
+     chiffres de son data-mois, dans index.html ET dans pizzeria.html.
+     Aucune autre manipulation n'est nécessaire : le site se remet à
+     jour tout seul au changement de mois.
+     ================================================================= */
+  const momentCards = document.querySelectorAll('.moment-card[data-mois]');
+  if (momentCards.length) {
+    const moisCourant = new Date().getMonth() + 1;
+
+    // Saison de retour, déduite du premier mois listé dans data-mois.
+    const saisonDe = (mois) => {
+      if (mois >= 3 && mois <= 5) return 'au printemps';
+      if (mois >= 6 && mois <= 8) return 'en été';
+      if (mois >= 9 && mois <= 11) return 'à l’automne';
+      return 'en hiver';
+    };
+
+    momentCards.forEach(card => {
+      const mois = card.dataset.mois
+        .split(',')
+        .map(n => parseInt(n.trim(), 10))
+        .filter(n => n >= 1 && n <= 12);
+      if (!mois.length) return; // data-mois vide ou mal saisi : on ne touche à rien
+
+      const badge = card.querySelector('.badge');
+      if (!badge) return;
+      badge.classList.remove('badge-moment');
+
+      if (mois.includes(moisCourant)) {
+        card.classList.add('est-dispo');
+        card.style.order = '-1'; // la pizza disponible passe en tête de grille
+        badge.classList.add('badge-dispo');
+        badge.textContent = 'À l’ardoise en ce moment';
+      } else {
+        card.classList.add('hors-saison');
+        badge.classList.add('badge-attente');
+        badge.textContent = 'Reviendra ' + saisonDe(mois[0]);
+      }
+    });
+  }
+
   /* ---- Contact form: show/hide devis fields ---- */
   const sujetSelect = document.getElementById('sujet');
   const devisFields = document.getElementById('devis-fields');

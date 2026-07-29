@@ -356,7 +356,12 @@
   </section>
 
   <!-- ===== PIZZAS DU MOMENT ===== -->
-  <!-- Vitrine : la liste complète vit sur /pizzeria#moment. Garder 3 cartes max ici. -->
+  <!-- Vitrine : doit rester le miroir exact de /pizzeria#moment.
+       Chaque carte porte un attribut data-mois = les mois où la pizza est
+       proposée (1 = janvier … 12 = décembre). Le site affiche tout seul
+       « À l'ardoise en ce moment » ou « Reviendra … », et remonte en premier
+       la pizza disponible. Pour changer une période : modifiez les chiffres
+       ici ET dans pizzeria.html (mêmes valeurs des deux côtés). -->
   <section class="bg-deep tight-top">
     <div class="container">
       <div class="section-head reveal">
@@ -370,7 +375,7 @@
       </div>
 
       <div class="moment-grid mt-md reveal">
-        <article class="moment-card">
+        <article class="moment-card" data-mois="8,9">
           <div class="moment-card-media">
             <img src="img/pizza-figues-framboises.jpg"
                  alt="Pizza sur base crème garnie de figues rôties, framboises, mûres et jambon cru"
@@ -383,7 +388,7 @@
           </div>
         </article>
 
-        <article class="moment-card">
+        <article class="moment-card" data-mois="6,7,8">
           <div class="moment-card-media">
             <img src="img/pizza-melon-prosciutto.jpg"
                  alt="Pizza garnie de billes de melon, tomates cerises, mesclun, mozzarella et jambon cru"
@@ -396,7 +401,20 @@
           </div>
         </article>
 
-        <article class="moment-card">
+        <article class="moment-card" data-mois="4,5,6">
+          <div class="moment-card-media">
+            <img src="img/pizza-petits-pois.jpg"
+                 alt="Pizza à la crème de petits pois avec guanciale croustillant et perles de mozzarella"
+                 width="1200" height="1592" loading="lazy">
+          </div>
+          <div class="moment-card-body">
+            <span class="badge badge-moment">Printemps</span>
+            <h3 class="moment-card-name">Petits pois &amp; guanciale</h3>
+            <p class="moment-card-desc">Crème de petits pois, petits pois frais, guanciale croustillant, perles de mozzarella, olives taggiasche.</p>
+          </div>
+        </article>
+
+        <article class="moment-card" data-mois="10,11,12">
           <div class="moment-card-media">
             <img src="img/pizza-mortadelle-truffe.jpg"
                  alt="Pizza à la crème de truffe, mortadelle, stracciatella et lamelles de truffe fraîche"
