@@ -5,3 +5,6 @@ ruvector.db
 node_modules/
 .vercel/
 .vercel
+
+# Captures d'audit avant/après livraison — livrable client, jamais versionné (116 Mo)
+_audit-captures/

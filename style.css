@@ -19,7 +19,14 @@
   --olive: #7C8A6B;
   --olive-deep: #5C6B4D;
 
-  --font-display: 'Fraunces', serif;
+  /* Police d'affichage — titres H1/H2 et wordmark uniquement.
+     Si la cliente achète un jour la licence webfont de la police manuscrite
+     du flyer (fonderie Zetafonts), il suffit de remplacer la valeur de cette
+     seule variable — et de recalculer le size-adjust du fallback ci-dessous. */
+  --font-display: 'Shantell Sans', 'Shantell Sans Fallback', cursive;
+  /* Police éditoriale — prix, noms de plats, sous-titres, chiffres.
+     Un script manuscrit à 0,8–1,1rem y serait illisible. */
+  --font-serif: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
 
   --space-3xs: 0.25rem;
@@ -43,6 +50,21 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---------- FALLBACK MÉTRIQUE DE LA POLICE D'AFFICHAGE ----------
+   Shantell Sans arrive du réseau ; en attendant, le navigateur affiche une
+   police locale. Sans calage, le remplacement décale les titres (CLS).
+   Chasse mesurée sur une chaîne de référence FR : Shantell / Arial = 1,0867,
+   d'où size-adjust: 108.67% — les titres occupent la même largeur avant et
+   après le swap, donc ils se coupent aux mêmes endroits et rien ne bouge.
+   À recalculer si --font-display change de police. */
+@font-face {
+  font-family: 'Shantell Sans Fallback';
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans');
+  size-adjust: 108.67%;
+  line-gap-override: 0%;
+  font-display: swap;
 }
 
 /* ---------- RESET ---------- */
@@ -98,8 +120,19 @@ a, button, input, select, textarea { touch-action: manipulation; }
 }
 
 /* ---------- TYPOGRAPHY ---------- */
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* H3/H4 restent en Fraunces : ce sont des titres de carte et de colonne,
+   souvent sous 1,3rem — trop petits pour un script manuscrit. */
+h3, h4 {
+  font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.08;
   color: var(--ink);
@@ -413,7 +446,7 @@ section.tight-bottom { padding-bottom: 0; }
 }
 .dual-card .hero-img { border-radius: 0; }
 .dual-card-body { padding: var(--space-md); }
-.dual-card-body .feature-num { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; display: block; }
+.dual-card-body .feature-num { font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; display: block; }
 .dual-card-body p { color: var(--ink-soft); margin-top: var(--space-2xs); font-size: 0.95rem; line-height: 1.65; }
 
 /* OFFER CARD (traiteur) */
@@ -442,7 +475,7 @@ section.tight-bottom { padding-bottom: 0; }
   transition: background 0.3s ease;
 }
 .feature-card:hover { background: #2a2018; }
-.feature-card .feature-num { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--camel); display: block; margin-bottom: var(--space-sm); }
+.feature-card .feature-num { font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; color: var(--camel); display: block; margin-bottom: var(--space-sm); }
 .feature-card h3 { margin-bottom: var(--space-2xs); }
 .feature-card p { color: rgba(251, 246, 239, 0.62); font-size: 0.92rem; }
 
@@ -453,7 +486,7 @@ section.tight-bottom { padding-bottom: 0; }
 
 .step-card { text-align: center; padding: var(--space-md) var(--space-sm); }
 .step-num {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-style: italic;
   font-size: 2rem;
   font-weight: 600;
@@ -492,7 +525,7 @@ section.tight-bottom { padding-bottom: 0; }
 .info-trio-item::before { content: ''; position: absolute; left: calc(-1 * var(--space-lg) / 2); top: 0.3rem; bottom: 0.3rem; width: 1px; background: rgba(31, 22, 16, 0.1); }
 .info-trio-item:first-child::before { display: none; }
 .info-trio-item .eyebrow { display: block; margin-bottom: var(--space-2xs); }
-.info-trio-item p { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; line-height: 1.5; color: var(--ink); }
+.info-trio-item p { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.5; color: var(--ink); }
 
 @media (max-width: 760px) {
   .info-trio { grid-template-columns: 1fr; gap: var(--space-md); }
@@ -576,7 +609,7 @@ section.tight-bottom { padding-bottom: 0; }
 }
 .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
 
-.gallery-caption .caption-title { font-family: var(--font-display); font-weight: 600; font-size: 1rem; margin-bottom: 0.15rem; }
+.gallery-caption .caption-title { font-family: var(--font-serif); font-weight: 600; font-size: 1rem; margin-bottom: 0.15rem; }
 .gallery-caption .caption-sub { font-size: 0.75rem; color: rgba(251, 246, 239, 0.75); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
 
 @media (max-width: 860px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -610,7 +643,7 @@ section.tight-bottom { padding-bottom: 0; }
 @media (max-width: 900px) {
   .menu-nav-item { flex-shrink: 0; border-bottom: none; border: 1.5px solid rgba(31,22,16,0.1); border-radius: 100px; padding: 0.55rem 1.1rem; }
 }
-.menu-nav-item .count { font-family: var(--font-display); font-style: italic; font-size: 0.8rem; color: var(--ink-faint); }
+.menu-nav-item .count { font-family: var(--font-serif); font-style: italic; font-size: 0.8rem; color: var(--ink-faint); }
 .menu-nav-item:hover, .menu-nav-item.active { color: var(--camel-deep); padding-left: 0.4rem; }
 @media (max-width: 900px) {
   .menu-nav-item:hover, .menu-nav-item.active { padding-left: 1.1rem; border-color: var(--camel); background: var(--bg-deep); }
@@ -624,7 +657,7 @@ section.tight-bottom { padding-bottom: 0; }
   padding-bottom: var(--space-2xs); border-bottom: 1.5px solid var(--ink);
 }
 .menu-category-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
-.menu-category-head .menu-cat-note { font-size: 0.85rem; color: var(--ink-faint); font-style: italic; font-family: var(--font-display); }
+.menu-category-head .menu-cat-note { font-size: 0.85rem; color: var(--ink-faint); font-style: italic; font-family: var(--font-serif); }
 
 .menu-item {
   display: grid; grid-template-columns: 1fr auto; gap: var(--space-md);
@@ -636,10 +669,10 @@ section.tight-bottom { padding-bottom: 0; }
 
 .menu-item-name {
   display: flex; align-items: baseline; gap: 0.5rem;
-  font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; flex-wrap: wrap; color: var(--ink);
+  font-family: var(--font-serif); font-weight: 600; font-size: 1.08rem; flex-wrap: wrap; color: var(--ink);
 }
 .menu-item-desc { color: var(--ink-soft); font-size: 0.875rem; margin-top: 0.3rem; line-height: 1.6; max-width: 46em; }
-.menu-item-price { font-family: var(--font-display); font-weight: 600; color: var(--camel-deep); white-space: nowrap; font-size: 1.08rem; font-feature-settings: "tnum"; }
+.menu-item-price { font-family: var(--font-serif); font-weight: 600; color: var(--camel-deep); white-space: nowrap; font-size: 1.08rem; font-feature-settings: "tnum"; }
 
 .badge { font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 100px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-family: var(--font-body); }
 .badge-spicy { background: #F6DDD4; color: #A04A2E; }
@@ -730,7 +763,7 @@ section.tight-bottom { padding-bottom: 0; }
 
 .supplements { margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1.5px solid var(--ink); display: flex; gap: var(--space-md) var(--space-xl); flex-wrap: wrap; font-size: 0.875rem; }
 .supplements .eyebrow { display: block; width: 100%; margin-bottom: var(--space-2xs); }
-.supplements strong { color: var(--ink); font-family: var(--font-display); }
+.supplements strong { color: var(--ink); font-family: var(--font-serif); }
 
 .float-cta { position: fixed; bottom: var(--space-sm); right: var(--space-sm); z-index: 90; display: none; }
 @media (max-width: 760px) { .float-cta { display: block; } }
@@ -1182,7 +1215,7 @@ main {
   justify-content: space-between;
   gap: var(--space-sm);
   padding: var(--space-sm) 0;
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   font-weight: 500;
   color: var(--ink);
