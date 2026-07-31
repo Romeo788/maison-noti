@@ -104,6 +104,14 @@ setTimeout(function () {
     .hero-banner { max-height: 220px; margin-bottom: var(--space-sm); }
     .hero-banner img { height: 220px; }
     .info-bar { flex-direction: column; gap: var(--space-sm); align-items: center; }
+
+    /* « Des pizzas qui ont du caractère » est le H1 le plus long du site.
+       En Shantell Sans il passait de 2 à 3 lignes sous 540px, ce qui
+       repoussait le bouton Uber Eats de 48px vers le bas. On abaisse le
+       PLANCHER du clamp (44px -> 40px) : à cette largeur c'est lui qui
+       gouverne, pas le plafond. Le H1 des autres pages et le desktop
+       ne sont pas touchés. */
+    h1 { font-size: clamp(2.5rem, 6.4vw, 5rem); }
   }
 </style>
 </head>
