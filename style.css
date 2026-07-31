@@ -906,6 +906,43 @@ section.tight-bottom { padding-bottom: 0; }
   opacity: 0.3;
 }
 
+/* ---------- FILET DE SÉCURITÉ DES ANIMATIONS D'APPARITION ----------
+   Tout le contenu du site est en opacity:0 et n'est révélé que par
+   script.js. Sans garde-fou, la moindre défaillance du JS afficherait
+   une page entièrement blanche. Trois protections se cumulent :
+
+   1. .no-js ci-dessous — la classe est posée sur <html> dans le HTML.
+      Un script inline en tête de <head> la retire. S'il ne tourne pas
+      (JS désactivé), la classe reste et tout s'affiche, sans animation.
+   2. Ce même script inline force l'affichage au bout de 2 s. Il couvre
+      script.js absent / en 404 / en erreur de syntaxe, l'observer qui
+      ne se déclenche jamais, et IntersectionObserver indisponible.
+      Il est inline précisément pour ne dépendre d'aucun fichier externe.
+   3. L'attribut onerror sur <script src="script.js"> remet .no-js
+      immédiatement si le fichier ne se charge pas, plutôt que de faire
+      patienter 2 s.
+   4. prefers-reduced-motion — même traitement pour qui refuse les
+      animations.
+
+   Les 4 scénarios de panne sont testés sur les 7 pages : JS coupé,
+   script.js en 404, IntersectionObserver absent, erreur JS précoce. */
+.no-js .reveal,
+.no-js .reveal-left,
+.no-js .reveal-right,
+.no-js .reveal-scale,
+.no-js .menu-category.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale, .menu-category.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Reveal on scroll */
 .reveal {
   opacity: 0;

@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ANTI PAGE BLANCHE — ne pas supprimer.
+     Tout le contenu du site est en opacity:0 et n'est révélé que par du JS.
+     Ce script inline est le seul filet qui ne dépende de rien d'autre :
+       1. il retire « no-js » avant le premier rendu (sinon : contenu affiché
+          puis masqué, donc un flash) ;
+       2. il force l'affichage au bout de 2 s si rien ne l'a fait.
+     Le point 2 est ici et NON dans script.js : un filet placé dans script.js
+     ne protège pas contre script.js absent, en 404 ou en erreur de syntaxe. -->
+<script>
+document.documentElement.classList.remove('no-js');
+setTimeout(function () {
+  var sel = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  // Si au moins un bloc a été révélé, le système fonctionne : l'utilisateur
+  // n'a simplement pas encore scrollé, on ne touche à rien. On ne force que
+  // si RIEN n'a été révélé — sinon on supprimerait toutes les animations.
+  if (document.querySelector('.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible')) return;
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('visible'); });
+}, 2000);
+</script>
 <title>Galerie — Enzo Pizza &amp; Maison NOTI | L'Isle-sur-la-Sorgue</title>
 <meta name="description" content="Plongez dans l'univers d'Enzo Pizza et Maison NOTI en images : pizzas napolitaines à fermentation lente, pâtes fraîches artisanales, réceptions traiteur et championnats de pizza à L'Isle-sur-la-Sorgue.">
 <meta name="robots" content="index, follow">
@@ -468,6 +487,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
 </body>
 </html>

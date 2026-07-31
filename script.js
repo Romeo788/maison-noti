@@ -2,6 +2,12 @@
    ENZO PIZZA & MAISON NOTI — Shared JS v3
    ============================================ */
 
+/* Anti page blanche : le filet de sécurité ne vit PAS dans ce fichier.
+   Il est inline dans le <head> de chaque page, avec la classe .no-js.
+   Raison : un filet placé ici ne couvrirait pas les cas où ce fichier
+   est absent, en 404 ou en erreur de syntaxe — c'est-à-dire les pannes
+   les plus probables. Voir le commentaire en tête de style.css. */
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Mobile nav toggle ---- */
