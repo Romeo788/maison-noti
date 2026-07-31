@@ -117,40 +117,49 @@ document.addEventListener('DOMContentLoaded', () => {
      Aucune autre manipulation n'est nécessaire : le site se remet à
      jour tout seul au changement de mois.
      ================================================================= */
-  const momentCards = document.querySelectorAll('.moment-card[data-mois]');
+  const momentCards = [...document.querySelectorAll('.moment-card[data-mois]')];
   if (momentCards.length) {
     const moisCourant = new Date().getMonth() + 1;
+    const NOMS_MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                       'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
-    // Saison de retour, déduite du premier mois listé dans data-mois.
-    const saisonDe = (mois) => {
-      if (mois >= 3 && mois <= 5) return 'au printemps';
-      if (mois >= 6 && mois <= 8) return 'en été';
-      if (mois >= 9 && mois <= 11) return 'à l’automne';
-      return 'en hiver';
-    };
+    const moisDe = (card) => card.dataset.mois
+      .split(',')
+      .map(n => parseInt(n.trim(), 10))
+      .filter(n => n >= 1 && n <= 12);
 
-    momentCards.forEach(card => {
-      const mois = card.dataset.mois
-        .split(',')
-        .map(n => parseInt(n.trim(), 10))
-        .filter(n => n >= 1 && n <= 12);
-      if (!mois.length) return; // data-mois vide ou mal saisi : on ne touche à rien
+    // Garde-fou : si aucune pizza ne correspond au mois en cours, on
+    // n'affiche RIEN du tout — ni badge, ni grisage, ni mention de retour.
+    // Les cartes restent exactement comme avant l'ajout de ce système.
+    // Une grille intégralement grisée serait pire que l'état d'origine.
+    const auMoinsUneDispo = momentCards.some(c => moisDe(c).includes(moisCourant));
 
-      const badge = card.querySelector('.badge');
-      if (!badge) return;
-      badge.classList.remove('badge-moment');
+    if (auMoinsUneDispo) {
+      momentCards.forEach(card => {
+        const mois = moisDe(card);
+        if (!mois.length) return; // data-mois vide ou mal saisi : on ne touche à rien
 
-      if (mois.includes(moisCourant)) {
-        card.classList.add('est-dispo');
-        card.style.order = '-1'; // la pizza disponible passe en tête de grille
-        badge.classList.add('badge-dispo');
-        badge.textContent = 'À l’ardoise en ce moment';
-      } else {
-        card.classList.add('hors-saison');
-        badge.classList.add('badge-attente');
-        badge.textContent = 'Reviendra ' + saisonDe(mois[0]);
-      }
-    });
+        const badge = card.querySelector('.badge');
+        if (!badge) return;
+        badge.classList.remove('badge-moment');
+
+        if (mois.includes(moisCourant)) {
+          card.classList.add('est-dispo');
+          card.style.order = '-1'; // la pizza disponible passe en tête de grille
+          badge.classList.add('badge-dispo');
+          badge.textContent = 'À l’ardoise en ce moment';
+        } else {
+          card.classList.add('hors-saison');
+          badge.classList.add('badge-attente');
+          // Formulation tournée vers le rendez-vous, pas vers l'absence :
+          // « À l'ardoise dès août » si la pizza arrive plus tard cette
+          // année, « Retour en avril » si sa saison est déjà passée.
+          const premier = mois[0];
+          badge.textContent = (premier > moisCourant ? 'À l’ardoise dès ' : 'Retour en ')
+            + NOMS_MOIS[premier - 1];
+        }
+      });
+    }
   }
 
   /* ---- Contact form: show/hide devis fields ---- */
