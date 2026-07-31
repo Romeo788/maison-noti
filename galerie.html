@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ANTI PAGE BLANCHE — ne pas supprimer.
+     Tout le contenu du site est en opacity:0 et n'est révélé que par du JS.
+     Ce script inline est le seul filet qui ne dépende de rien d'autre :
+       1. il retire « no-js » avant le premier rendu (sinon : contenu affiché
+          puis masqué, donc un flash) ;
+       2. il force l'affichage au bout de 2 s si rien ne l'a fait.
+     Le point 2 est ici et NON dans script.js : un filet placé dans script.js
+     ne protège pas contre script.js absent, en 404 ou en erreur de syntaxe. -->
+<script>
+document.documentElement.classList.remove('no-js');
+setTimeout(function () {
+  var sel = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  // Si au moins un bloc a été révélé, le système fonctionne : l'utilisateur
+  // n'a simplement pas encore scrollé, on ne touche à rien. On ne force que
+  // si RIEN n'a été révélé — sinon on supprimerait toutes les animations.
+  if (document.querySelector('.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible')) return;
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('visible'); });
+}, 2000);
+</script>
 <title>Galerie — Enzo Pizza &amp; Maison NOTI | L'Isle-sur-la-Sorgue</title>
 <meta name="description" content="Plongez dans l'univers d'Enzo Pizza et Maison NOTI en images : pizzas napolitaines à fermentation lente, pâtes fraîches artisanales, réceptions traiteur et championnats de pizza à L'Isle-sur-la-Sorgue.">
 <meta name="robots" content="index, follow">
@@ -41,7 +60,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
 /* Gallery-specific: image aspect ratios for masonry layout */
@@ -120,7 +139,7 @@
         <span class="eyebrow">La pizzeria</span>
         <h2 class="mt-2xs"><span class="text-shimmer">Enzo Pizza,</span> <span class="italic-display">au fil des jours</span></h2>
         <div class="section-divider"></div>
-        <p class="lede mt-sm">Deux jours de repos pour la pâte, des produits triés sur le volet, et les gestes précis d'une vice-championne de France. Ici, chaque pizza a quelque chose à raconter.</p>
+        <p class="lede mt-sm">Un préferment travaillé, 48h de repos minimum, des produits triés sur le volet, et les gestes précis d'une vice-championne de France. Ici, chaque pizza a quelque chose à raconter.</p>
       </div>
 
       <div class="gallery-grid">
@@ -149,11 +168,11 @@
         <!-- 3. Pizza petits pois -->
         <div class="gallery-item reveal" data-category="pizzeria">
           <img src="img/pizza-petits-pois.jpg"
-               alt="Pizza petits pois, lardons et billes de mozzarella"
+               alt="Pizza petits pois, guanciale croustillant et perles de mozzarella"
                loading="lazy" width="1200" height="1592">
           <div class="gallery-caption">
-            <div class="caption-title">Petits pois &amp; mozzarella</div>
-            <div class="caption-sub">Spécialité maison</div>
+            <div class="caption-title">Petits pois &amp; guanciale</div>
+            <div class="caption-sub">Création saisonnière</div>
           </div>
         </div>
 
@@ -171,7 +190,7 @@
         <!-- 5. Pizza mortadelle truffe -->
         <div class="gallery-item reveal" data-category="pizzeria">
           <img src="img/pizza-mortadelle-truffe.jpg"
-               alt="Pizza mortadelle, truffe noire et burrata"
+               alt="Pizza mortadelle, truffe noire et stracciatella"
                loading="lazy" width="1200" height="1570">
           <div class="gallery-caption">
             <div class="caption-title">Mortadelle &amp; truffe</div>
@@ -468,6 +487,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
 </body>
 </html>

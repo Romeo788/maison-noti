@@ -2,6 +2,12 @@
    ENZO PIZZA & MAISON NOTI — Shared JS v3
    ============================================ */
 
+/* Anti page blanche : le filet de sécurité ne vit PAS dans ce fichier.
+   Il est inline dans le <head> de chaque page, avec la classe .no-js.
+   Raison : un filet placé ici ne couvrirait pas les cas où ce fichier
+   est absent, en 404 ou en erreur de syntaxe — c'est-à-dire les pannes
+   les plus probables. Voir le commentaire en tête de style.css. */
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Mobile nav toggle ---- */
@@ -86,6 +92,74 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.1, rootMargin: '-100px 0px -60% 0px' });
     menuCategories.forEach(cat => spyObserver.observe(cat));
+  }
+
+  /* =================================================================
+     PIZZAS DU MOMENT — affichage automatique de la disponibilité
+     =================================================================
+     À LIRE MÊME SI VOUS NE CODEZ PAS :
+
+     Dans index.html et pizzeria.html, chaque pizza du moment porte
+     un attribut data-mois. Il contient les mois où la pizza est
+     proposée, en chiffres séparés par des virgules :
+       1 = janvier, 2 = février, 3 = mars, … 12 = décembre.
+
+     Exemple :  data-mois="6,7,8"   ->  juin, juillet, août.
+
+     Ce bloc compare le mois en cours à cette liste :
+       - le mois en cours y figure  ->  badge « À l'ardoise en ce moment »
+                                        et la pizza remonte en premier ;
+       - sinon                      ->  mention « Reviendra … », photo
+                                        atténuée, pas d'effet au survol.
+
+     POUR CHANGER LA PÉRIODE D'UNE PIZZA : il suffit de modifier les
+     chiffres de son data-mois, dans index.html ET dans pizzeria.html.
+     Aucune autre manipulation n'est nécessaire : le site se remet à
+     jour tout seul au changement de mois.
+     ================================================================= */
+  const momentCards = [...document.querySelectorAll('.moment-card[data-mois]')];
+  if (momentCards.length) {
+    const moisCourant = new Date().getMonth() + 1;
+    const NOMS_MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                       'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+    const moisDe = (card) => card.dataset.mois
+      .split(',')
+      .map(n => parseInt(n.trim(), 10))
+      .filter(n => n >= 1 && n <= 12);
+
+    // Garde-fou : si aucune pizza ne correspond au mois en cours, on
+    // n'affiche RIEN du tout — ni badge, ni grisage, ni mention de retour.
+    // Les cartes restent exactement comme avant l'ajout de ce système.
+    // Une grille intégralement grisée serait pire que l'état d'origine.
+    const auMoinsUneDispo = momentCards.some(c => moisDe(c).includes(moisCourant));
+
+    if (auMoinsUneDispo) {
+      momentCards.forEach(card => {
+        const mois = moisDe(card);
+        if (!mois.length) return; // data-mois vide ou mal saisi : on ne touche à rien
+
+        const badge = card.querySelector('.badge');
+        if (!badge) return;
+        badge.classList.remove('badge-moment');
+
+        if (mois.includes(moisCourant)) {
+          card.classList.add('est-dispo');
+          card.style.order = '-1'; // la pizza disponible passe en tête de grille
+          badge.classList.add('badge-dispo');
+          badge.textContent = 'À l’ardoise en ce moment';
+        } else {
+          card.classList.add('hors-saison');
+          badge.classList.add('badge-attente');
+          // Formulation tournée vers le rendez-vous, pas vers l'absence :
+          // « À l'ardoise dès août » si la pizza arrive plus tard cette
+          // année, « Retour en avril » si sa saison est déjà passée.
+          const premier = mois[0];
+          badge.textContent = (premier > moisCourant ? 'À l’ardoise dès ' : 'Retour en ')
+            + NOMS_MOIS[premier - 1];
+        }
+      });
+    }
   }
 
   /* ---- Contact form: show/hide devis fields ---- */
@@ -205,8 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const target = counter.dataset.count;
           const suffix = counter.dataset.suffix || '';
 
-          // Check if target is a number
-          const isNumber = !isNaN(parseFloat(target));
+          // Le compteur ne s'anime que si data-count est UNIQUEMENT un nombre.
+          // parseFloat() acceptait "7j/7" en le tronquant à 7, et écrasait
+          // le texte de la page par "7". Toute partie non numérique doit
+          // passer par data-suffix.
+          const isNumber = /^\d+(\.\d+)?$/.test(target.trim());
 
           if (isNumber) {
             const targetValue = parseFloat(target);

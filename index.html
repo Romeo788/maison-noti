@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ANTI PAGE BLANCHE — ne pas supprimer.
+     Tout le contenu du site est en opacity:0 et n'est révélé que par du JS.
+     Ce script inline est le seul filet qui ne dépende de rien d'autre :
+       1. il retire « no-js » avant le premier rendu (sinon : contenu affiché
+          puis masqué, donc un flash) ;
+       2. il force l'affichage au bout de 2 s si rien ne l'a fait.
+     Le point 2 est ici et NON dans script.js : un filet placé dans script.js
+     ne protège pas contre script.js absent, en 404 ou en erreur de syntaxe. -->
+<script>
+document.documentElement.classList.remove('no-js');
+setTimeout(function () {
+  var sel = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  // Si au moins un bloc a été révélé, le système fonctionne : l'utilisateur
+  // n'a simplement pas encore scrollé, on ne touche à rien. On ne force que
+  // si RIEN n'a été révélé — sinon on supprimerait toutes les animations.
+  if (document.querySelector('.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible')) return;
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('visible'); });
+}, 2000);
+</script>
 <title>Enzo Pizza &amp; Maison NOTI — Pizzas napolitaines artisanales | L'Isle-sur-la-Sorgue</title>
 <meta name="description" content="Enzo Pizza : pizzas napolitaines à fermentation lente 48h et pâtes fraîches faites maison par Cindy, vice-championne de France. Maison NOTI : traiteur événementiel en Vaucluse. L'Isle-sur-la-Sorgue.">
 <meta name="keywords" content="pizza napolitaine, L'Isle-sur-la-Sorgue, pâtes fraîches, traiteur Vaucluse, Maison NOTI, Enzo Pizza, fermentation lente, vice-championne de France pizza">
@@ -33,7 +52,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <!-- Shared styles -->
 <link rel="stylesheet" href="style.css">
@@ -146,7 +165,7 @@
       "name": "Quels sont les horaires d'ouverture d'Enzo Pizza ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enzo Pizza est ouvert 7 jours sur 7. Du mardi au dimanche de 17h à 22h, le lundi et le jeudi de 17h à 21h30. La réservation est fortement conseillée, surtout le week-end."
+        "text": "Enzo Pizza est ouvert 7 jours sur 7, de 17h à 22h — sauf le lundi et le jeudi, où nous fermons à 21h30. La réservation est fortement conseillée, surtout le week-end."
       }
     },
     {
@@ -225,7 +244,7 @@
             <span class="italic-display">et de pizzas</span>
           </h1>
           <p class="lede" style="max-width: 32em;">
-            Une pâte qui a reposé deux jours. Des produits qu'on ne choisit pas par hasard.
+            Une pâte au préferment, 48h de repos minimum. Des produits qu'on ne choisit pas par hasard.
             Et les mains de Cindy — vice-championne de France — qui transforment tout ça
             en quelque chose qui vous arrête à la première bouchée.
           </p>
@@ -235,11 +254,11 @@
           </div>
           <div class="hero-stats">
             <div>
-              <strong style="font-family: var(--font-display); font-size:1.5rem; display:block;" class="counter-animated" data-count="48" data-suffix="h">48h</strong>
+              <strong style="font-family: var(--font-serif); font-size:1.5rem; display:block;" class="counter-animated" data-count="48" data-suffix="h">48h</strong>
               <span style="font-size:0.75rem; color: var(--ink-faint); letter-spacing:0.06em; text-transform:uppercase;">de repos minimum</span>
             </div>
             <div>
-              <strong style="font-family: var(--font-display); font-size:1.5rem; display:block;" class="counter-animated" data-count="7j/7">7j/7</strong>
+              <strong style="font-family: var(--font-serif); font-size:1.5rem; display:block;" class="counter-animated" data-count="7" data-suffix="j/7">7j/7</strong>
               <span style="font-size:0.75rem; color: var(--ink-faint); letter-spacing:0.06em; text-transform:uppercase;">ouvert</span>
             </div>
           </div>
@@ -286,15 +305,15 @@
           </p>
           <ul style="list-style: none; margin-top: var(--space-sm); display: flex; flex-direction: column; gap: 0.6rem;">
             <li style="display: flex; align-items: baseline; gap: 0.6rem;">
-              <span style="color: var(--camel); font-family: var(--font-display); font-style: italic;">01</span>
+              <span style="color: var(--camel); font-family: var(--font-serif); font-style: italic;">01</span>
               <span style="color: var(--ink-soft); font-size: 0.95rem;"><strong style="color: var(--ink);">Vice-championne de France féminine</strong></span>
             </li>
             <li style="display: flex; align-items: baseline; gap: 0.6rem;">
-              <span style="color: var(--camel); font-family: var(--font-display); font-style: italic;">02</span>
+              <span style="color: var(--camel); font-family: var(--font-serif); font-style: italic;">02</span>
               <span style="color: var(--ink-soft); font-size: 0.95rem;"><strong style="color: var(--ink);">Vice-championne de France toutes catégories</strong> — qualifiée à Paris</span>
             </li>
             <li style="display: flex; align-items: baseline; gap: 0.6rem;">
-              <span style="color: var(--camel); font-family: var(--font-display); font-style: italic;">03</span>
+              <span style="color: var(--camel); font-family: var(--font-serif); font-style: italic;">03</span>
               <span style="color: var(--ink-soft); font-size: 0.95rem;"><strong style="color: var(--ink);">Vice-championne de Corse</strong></span>
             </li>
           </ul>
@@ -356,7 +375,12 @@
   </section>
 
   <!-- ===== PIZZAS DU MOMENT ===== -->
-  <!-- Vitrine : la liste complète vit sur /pizzeria#moment. Garder 3 cartes max ici. -->
+  <!-- Vitrine : doit rester le miroir exact de /pizzeria#moment.
+       Chaque carte porte un attribut data-mois = les mois où la pizza est
+       proposée (1 = janvier … 12 = décembre). Le site affiche tout seul
+       « À l'ardoise en ce moment » ou « Reviendra … », et remonte en premier
+       la pizza disponible. Pour changer une période : modifiez les chiffres
+       ici ET dans pizzeria.html (mêmes valeurs des deux côtés). -->
   <section class="bg-deep tight-top">
     <div class="container">
       <div class="section-head reveal">
@@ -370,7 +394,7 @@
       </div>
 
       <div class="moment-grid mt-md reveal">
-        <article class="moment-card">
+        <article class="moment-card" data-mois="8,9">
           <div class="moment-card-media">
             <img src="img/pizza-figues-framboises.jpg"
                  alt="Pizza sur base crème garnie de figues rôties, framboises, mûres et jambon cru"
@@ -383,7 +407,7 @@
           </div>
         </article>
 
-        <article class="moment-card">
+        <article class="moment-card" data-mois="6,7,8">
           <div class="moment-card-media">
             <img src="img/pizza-melon-prosciutto.jpg"
                  alt="Pizza garnie de billes de melon, tomates cerises, mesclun, mozzarella et jambon cru"
@@ -396,7 +420,20 @@
           </div>
         </article>
 
-        <article class="moment-card">
+        <article class="moment-card" data-mois="4,5,6">
+          <div class="moment-card-media">
+            <img src="img/pizza-petits-pois.jpg"
+                 alt="Pizza à la crème de petits pois avec guanciale croustillant et perles de mozzarella"
+                 width="1200" height="1592" loading="lazy">
+          </div>
+          <div class="moment-card-body">
+            <span class="badge badge-moment">Printemps</span>
+            <h3 class="moment-card-name">Petits pois &amp; guanciale</h3>
+            <p class="moment-card-desc">Crème de petits pois, petits pois frais, guanciale croustillant, perles de mozzarella, olives taggiasche.</p>
+          </div>
+        </article>
+
+        <article class="moment-card" data-mois="10,11,12">
           <div class="moment-card-media">
             <img src="img/pizza-mortadelle-truffe.jpg"
                  alt="Pizza à la crème de truffe, mortadelle, stracciatella et lamelles de truffe fraîche"
@@ -453,7 +490,7 @@
       </div>
 
       <blockquote class="text-center reveal quote-block" style="max-width: 680px; margin: var(--space-2xl) auto 0;">
-        <p style="font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(1.5rem, 3.2vw, 2.4rem); color: var(--bg); line-height:1.3;">
+        <p style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: clamp(1.5rem, 3.2vw, 2.4rem); color: var(--bg); line-height:1.3;">
           « Vivre d'amour et de pizzas »
         </p>
         <cite style="display:block; margin-top: var(--space-sm); font-size: 0.82rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--blush); font-style:normal;">
@@ -485,7 +522,7 @@
         </details>
         <details class="faq-item">
           <summary>Quels sont les horaires d'ouverture ?</summary>
-          <p>Enzo Pizza est ouvert 7 jours sur 7. Du mardi au dimanche de 17h à 22h, le lundi et le jeudi de 17h à 21h30. Nous vous recommandons de réserver, surtout le week-end.</p>
+          <p>Enzo Pizza est ouvert 7 jours sur 7, de 17h à 22h — sauf le lundi et le jeudi, où nous fermons à 21h30. Nous vous recommandons de réserver, surtout le week-end.</p>
         </details>
         <details class="faq-item">
           <summary>Enzo Pizza livre-t-il à domicile ?</summary>
@@ -582,6 +619,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
 </body>
 </html>

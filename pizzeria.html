@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ANTI PAGE BLANCHE — ne pas supprimer.
+     Tout le contenu du site est en opacity:0 et n'est révélé que par du JS.
+     Ce script inline est le seul filet qui ne dépende de rien d'autre :
+       1. il retire « no-js » avant le premier rendu (sinon : contenu affiché
+          puis masqué, donc un flash) ;
+       2. il force l'affichage au bout de 2 s si rien ne l'a fait.
+     Le point 2 est ici et NON dans script.js : un filet placé dans script.js
+     ne protège pas contre script.js absent, en 404 ou en erreur de syntaxe. -->
+<script>
+document.documentElement.classList.remove('no-js');
+setTimeout(function () {
+  var sel = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  // Si au moins un bloc a été révélé, le système fonctionne : l'utilisateur
+  // n'a simplement pas encore scrollé, on ne touche à rien. On ne force que
+  // si RIEN n'a été révélé — sinon on supprimerait toutes les animations.
+  if (document.querySelector('.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible')) return;
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('visible'); });
+}, 2000);
+</script>
 <title>La Carte — Enzo Pizza | Pizzas napolitaines &amp; pâtes fraîches à L'Isle-sur-la-Sorgue</title>
 <meta name="description" content="Découvrez la carte d'Enzo Pizza : pizzas napolitaines artisanales à pâte fermentée 48h minimum, vice-championne de France 2025. Pâtes fraîches faites maison, gnocchis, raviolis et desserts. L'Isle-sur-la-Sorgue.">
 <meta name="robots" content="index, follow">
@@ -28,7 +47,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 <!-- JSON-LD Structured Data -->
@@ -85,6 +104,14 @@
     .hero-banner { max-height: 220px; margin-bottom: var(--space-sm); }
     .hero-banner img { height: 220px; }
     .info-bar { flex-direction: column; gap: var(--space-sm); align-items: center; }
+
+    /* « Des pizzas qui ont du caractère » est le H1 le plus long du site.
+       En Shantell Sans il passait de 2 à 3 lignes sous 540px, ce qui
+       repoussait le bouton Uber Eats de 48px vers le bas. On abaisse le
+       PLANCHER du clamp (44px -> 40px) : à cette largeur c'est lui qui
+       gouverne, pas le plafond. Le H1 des autres pages et le desktop
+       ne sont pas touchés. */
+    h1 { font-size: clamp(2.5rem, 6.4vw, 5rem); }
   }
 </style>
 </head>
@@ -125,7 +152,7 @@
       <span class="eyebrow reveal">La carte · Enzo Pizza</span>
       <h1 class="mt-sm reveal" style="margin-bottom: var(--space-sm);"><span class="text-shimmer">Des pizzas qui ont du</span> <span class="italic-display">caractère</span></h1>
       <div class="section-divider"></div>
-      <p class="lede reveal" style="max-width: 40em;">Deux jours de repos pour la pâte. Des produits qu'on ne négocie pas. Et le savoir-faire d'une vice-championne de France derrière chaque pizza. Sur place, à emporter, ou livrées via Uber Eats.</p>
+      <p class="lede reveal" style="max-width: 40em;">Un préferment, 48h de repos minimum. Des produits qu'on ne négocie pas. Et le savoir-faire d'une vice-championne de France derrière chaque pizza. Sur place, à emporter, ou livrées via Uber Eats.</p>
       <div class="reveal btn-group" style="display:flex; gap:var(--space-sm); margin-top: var(--space-md); flex-wrap:wrap; align-items:center;">
         <a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="btn btn-fill" target="_blank" rel="noopener">Commander sur Uber Eats</a>
         <span class="tag-outline">Pas de livraison hors Uber Eats</span>
@@ -149,8 +176,8 @@
       <div class="menu-layout">
         <nav class="menu-nav reveal-left" aria-label="Catégories de la carte">
           <a href="#moment" class="menu-nav-item active" data-target="moment"><span>Pizzas du moment</span><span class="count">4</span></a>
-          <a href="#rouges" class="menu-nav-item" data-target="rouges"><span>Pizzas rouges</span><span class="count">21</span></a>
-          <a href="#blanches" class="menu-nav-item" data-target="blanches"><span>Pizzas blanches</span><span class="count">4</span></a>
+          <a href="#classiques" class="menu-nav-item" data-target="classiques"><span>Les classiques</span><span class="count">21</span></a>
+          <a href="#blanches" class="menu-nav-item" data-target="blanches"><span>Les blanches</span><span class="count">4</span></a>
           <a href="#pates" class="menu-nav-item" data-target="pates"><span>Pâtes fraîches</span><span class="count">7</span></a>
           <a href="#plats" class="menu-nav-item" data-target="plats"><span>À partager</span><span class="count">3</span></a>
           <a href="#desserts" class="menu-nav-item" data-target="desserts"><span>Desserts</span><span class="count">3</span></a>
@@ -159,9 +186,21 @@
         <div>
           <!-- =========================================================
                PIZZAS DU MOMENT — à mettre à jour au fil des saisons.
+
                Ajouter / retirer une pizza = dupliquer ou supprimer un bloc
                <article class="moment-card">. Penser à ajuster le compteur
                de la nav ci-dessus (<span class="count">).
+
+               ---- QUELLE PIZZA EST À L'ARDOISE ? ----
+               Chaque carte porte un attribut data-mois : la liste des mois
+               où la pizza est proposée (1 = janvier … 12 = décembre).
+               Exemple : data-mois="6,7,8" = juin, juillet, août.
+
+               Le site compare ce mois-ci à cette liste et affiche tout seul
+               soit « À l'ardoise en ce moment », soit « Reviendra … ».
+               Pour changer une période : modifiez juste les chiffres.
+               Rien d'autre à toucher. Les mêmes valeurs sont à reporter sur
+               l'accueil (index.html), section « Les pizzas du moment ».
                ========================================================= -->
           <div class="menu-category reveal" id="moment">
             <div class="menu-category-head"><h2>Pizzas du moment</h2><span class="menu-cat-note">créations éphémères</span></div>
@@ -169,7 +208,7 @@
             <p class="moment-intro">Quelques semaines par an seulement. Cindy sort de la carte et compose autour des produits de saison — dès qu'ils quittent le marché, la pizza quitte l'ardoise. <strong>Prix affichés en salle.</strong></p>
 
             <div class="moment-grid">
-              <article class="moment-card">
+              <article class="moment-card" data-mois="8,9">
                 <div class="moment-card-media">
                   <img src="img/pizza-figues-framboises.jpg"
                        alt="Pizza sur base crème garnie de figues rôties, framboises, mûres et jambon cru"
@@ -182,7 +221,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="6,7,8">
                 <div class="moment-card-media">
                   <img src="img/pizza-melon-prosciutto.jpg"
                        alt="Pizza garnie de billes de melon, tomates cerises, mesclun, mozzarella et jambon cru"
@@ -195,7 +234,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="4,5,6">
                 <div class="moment-card-media">
                   <img src="img/pizza-petits-pois.jpg"
                        alt="Pizza à la crème de petits pois avec guanciale croustillant et perles de mozzarella"
@@ -208,7 +247,7 @@
                 </div>
               </article>
 
-              <article class="moment-card">
+              <article class="moment-card" data-mois="10,11,12">
                 <div class="moment-card-media">
                   <img src="img/pizza-mortadelle-truffe.jpg"
                        alt="Pizza à la crème de truffe, mortadelle, stracciatella et lamelles de truffe fraîche"
@@ -223,9 +262,12 @@
             </div>
           </div>
 
-          <!-- Pizzas rouges -->
-          <div class="menu-category reveal" id="rouges">
-            <div class="menu-category-head"><h2>Pizzas rouges</h2><span class="menu-cat-note">base sauce tomate</span></div>
+          <!-- Les classiques — ancre #classiques.
+               Section renommée : 6 pizzas qu'elle contient sont sur base crème
+               (Diavola, Carbonara, Pollo, Doudou, Marakchi, Quattro Formaggi).
+               L'ordre des pizzas est celui voulu par la cheffe : ne pas le changer. -->
+          <div class="menu-category reveal" id="classiques">
+            <div class="menu-category-head"><h2>Les classiques</h2><span class="menu-cat-note">la carte toute l'année</span></div>
 
             <div class="menu-item"><div><div class="menu-item-name">Focaccia Mini <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Pâte maison légère, huile d'olive, sel, et origan.</p></div><div class="menu-item-price">3,90 €</div></div>
 
@@ -270,9 +312,9 @@
             <div class="menu-item"><div><div class="menu-item-name">Marakchi</div><p class="menu-item-desc">Crème, oignons confits, sauce blanche, kebab, mozzarella fior di latte.</p></div><div class="menu-item-price">15,90 €</div></div>
           </div>
 
-          <!-- Pizzas blanches -->
+          <!-- Les blanches — ancre #blanches (inchangée) -->
           <div class="menu-category reveal" id="blanches">
-            <div class="menu-category-head"><h2>Pizzas blanches</h2><span class="menu-cat-note">base crème</span></div>
+            <div class="menu-category-head"><h2>Les blanches</h2><span class="menu-cat-note">sans sauce tomate</span></div>
 
             <div class="menu-item"><div><div class="menu-item-name">Dodu</div><p class="menu-item-desc">Crème, Taleggio, mozzarella fior di latte, après cuisson sgrassatella (mélange coppa, pancetta), huile de cacahuète, éclats de cacahuètes.</p></div><div class="menu-item-price">16,90 €</div></div>
 
@@ -370,7 +412,7 @@
     <div class="container text-center reveal-scale">
       <span class="eyebrow">Pour vos événements</span>
       <h2 class="mt-2xs"><span class="text-shimmer">Et pour vos fêtes,</span> <span class="italic-display">on se déplace</span></h2>
-      <p class="lede mt-sm mx-auto" style="text-align:center;">La même pâte, le même four, le même savoir-faire — mais chez vous. Maison NOTI installe tout et cuisine devant vos invités.</p>
+      <p class="lede mt-sm mx-auto" style="text-align:center;">La même pâte, les mêmes produits, le même savoir-faire — mais chez vous. Maison NOTI installe tout et cuisine devant vos invités.</p>
       <a href="/traiteur" class="btn btn-fill accent-olive mt-md" style="display:inline-flex;">Découvrir Maison NOTI</a>
     </div>
   </section>
@@ -400,6 +442,6 @@
 
 <div class="float-cta"><a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="btn btn-fill" target="_blank" rel="noopener" aria-label="Commander sur Uber Eats">Uber Eats</a></div>
 
-<script src="script.js"></script>
+<script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
 </body>
 </html>
