@@ -279,8 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const target = counter.dataset.count;
           const suffix = counter.dataset.suffix || '';
 
-          // Check if target is a number
-          const isNumber = !isNaN(parseFloat(target));
+          // Le compteur ne s'anime que si data-count est UNIQUEMENT un nombre.
+          // parseFloat() acceptait "7j/7" en le tronquant à 7, et écrasait
+          // le texte de la page par "7". Toute partie non numérique doit
+          // passer par data-suffix.
+          const isNumber = /^\d+(\.\d+)?$/.test(target.trim());
 
           if (isNumber) {
             const targetValue = parseFloat(target);
