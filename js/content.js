@@ -41,7 +41,9 @@
     }).join('');
   }
 
-  /* ── formatHours — exact port of lib/sections/infos/format-hours.ts ── */
+  /* ── formatHours ───────────────────────────────────────────────
+     Groups days by schedule, majority first.  When a group covers
+     5+ days it renders as "Tous les jours" with "sauf" exceptions. */
   var DAYS  = ['mon','tue','wed','thu','fri','sat','sun'];
   var DAY_L = {mon:'Lundi',tue:'Mardi',wed:'Mercredi',thu:'Jeudi',
                fri:'Vendredi',sat:'Samedi',sun:'Dimanche'};
@@ -52,34 +54,61 @@
   function dk(d)  { return d.closed ? 'X' : d.slots.map(function(s){return s.open+'-'+s.close}).sort().join('|'); }
   function fs(sl) { return sl.map(function(s){return ft(s.open)+'\u2013'+ft(s.close)}).join(', '); }
 
+  /* Day-list label: first name capitalised, rest lowercase */
   function dl(days) {
     if (days.length === 1) return DAY_L[days[0]];
     var ix = days.map(function(d){return DAYS.indexOf(d)}).sort(function(a,b){return a-b});
     if (ix.every(function(v,i){return !i || v === ix[i-1]+1}) && days.length >= 3) {
       var s = ix.map(function(i){return DAYS[i]});
-      return DAY_L[s[0]] + ' \u00e0 ' + DAY_L[s[s.length-1]];
+      return DAY_L[s[0]] + ' \u00e0 ' + DAY_L[s[s.length-1]].toLowerCase();
     }
-    if (days.length === 2) return DAY_L[days[0]] + ' & ' + DAY_L[days[1]].toLowerCase();
-    return days.map(function(d){return DAY_L[d]}).join(', ');
+    return days.map(function(d, i) {
+      return i === 0 ? DAY_L[d] : DAY_L[d].toLowerCase();
+    }).join(days.length === 2 ? ' & ' : ', ');
+  }
+
+  /* All-lowercase day list (for "sauf" exception lines) */
+  function dlLower(days) {
+    var names = days.map(function(d) { return DAY_L[d].toLowerCase(); });
+    if (names.length === 1) return names[0];
+    return names.length === 2 ? names[0] + ' & ' + names[1] : names.join(', ');
   }
 
   function formatHours(hours) {
-    var g = [];
-    DAYS.forEach(function(d) {
-      var h = hours[d], k = dk(h), last = g[g.length - 1];
-      if (last && last.k === k) last.d.push(d);
-      else g.push({d: [d], h: h, k: k});
-    });
-    if (g.length === 1) {
-      return g[0].h.closed
-        ? ['Ferm\u00e9 tous les jours']
-        : ['Tous les jours\u00a0: ' + fs(g[0].h.slots)];
-    }
+    /* merge all days sharing the same schedule (non-consecutive too) */
     var m = {}, o = [];
-    g.forEach(function(x) {
-      if (m[x.k]) m[x.k].d = m[x.k].d.concat(x.d);
-      else { m[x.k] = {d: x.d.slice(), h: x.h}; o.push(x.k); }
+    DAYS.forEach(function(d) {
+      var h = hours[d], k = dk(h);
+      if (m[k]) m[k].d.push(d);
+      else { m[k] = {d: [d], h: h}; o.push(k); }
     });
+    /* sort groups: largest first */
+    o.sort(function(a, b) { return m[b].d.length - m[a].d.length; });
+
+    /* single group → "Tous les jours" */
+    if (o.length === 1) {
+      var g = m[o[0]];
+      return g.h.closed
+        ? ['Ferm\u00e9 tous les jours']
+        : ['Tous les jours\u00a0: ' + fs(g.h.slots)];
+    }
+
+    /* majority (5+ days) → "Tous les jours" + "sauf …" exceptions */
+    var major = m[o[0]];
+    if (major.d.length >= 5) {
+      var lines = [major.h.closed
+        ? 'Ferm\u00e9 tous les jours'
+        : 'Tous les jours\u00a0: ' + fs(major.h.slots)];
+      for (var i = 1; i < o.length; i++) {
+        var x = m[o[i]], dn = dlLower(x.d);
+        lines.push(x.h.closed
+          ? 'sauf ' + dn + '\u00a0: ferm\u00e9'
+          : 'sauf ' + dn + '\u00a0: ' + fs(x.h.slots));
+      }
+      return lines;
+    }
+
+    /* fallback: list each group normally */
     return o.map(function(k) {
       var x = m[k], n = dl(x.d);
       return x.h.closed ? n + '\u00a0: ferm\u00e9' : n + '\u00a0: ' + fs(x.h.slots);
@@ -109,8 +138,10 @@
   /* ── Specials (/ and /pizzeria) ──────────────────────────────── */
   function applySpecials(data) {
     var items = (data.items || []).filter(function(s) { return s.active; });
-    if (!items.length) return;
     $$('[data-content="specials"]').forEach(function(el) {
+      var section = el.closest('.menu-category, section, article') || el.parentElement;
+      if (!items.length) { section.style.display = 'none'; return; }
+      section.style.display = '';
       el.innerHTML = items.map(function(s) {
         return '<article class="moment-card">' +
           '<div class="moment-card-media">' +
@@ -130,11 +161,15 @@
   function applyMenuNav(specials, menu) {
     var nav = $('[data-content="menu-nav"]');
     if (!nav) return;
-    var n = (specials.items || []).filter(function(s) { return s.active; }).length;
-    var h = '<a href="#moment" class="menu-nav-item active" data-target="moment">' +
-            '<span>Pizzas du moment</span><span class="count">' + n + '</span></a>';
-    (menu.categories || []).forEach(function(c) {
-      h += '<a href="#' + esc(c.id) + '" class="menu-nav-item" data-target="' + esc(c.id) + '">' +
+    var active = (specials.items || []).filter(function(s) { return s.active; });
+    var h = '';
+    if (active.length) {
+      h = '<a href="#moment" class="menu-nav-item active" data-target="moment">' +
+          '<span>Pizzas du moment</span><span class="count">' + active.length + '</span></a>';
+    }
+    (menu.categories || []).forEach(function(c, i) {
+      var first = !active.length && i === 0;
+      h += '<a href="#' + esc(c.id) + '" class="menu-nav-item' + (first ? ' active' : '') + '" data-target="' + esc(c.id) + '">' +
            '<span>' + esc(c.name) + '</span><span class="count">' + c.items.length + '</span></a>';
     });
     nav.innerHTML = h;
@@ -200,7 +235,7 @@
     /* phones blocks (pizzeria phone + booking note) */
     $$('[data-content="phones"]').forEach(function(el) {
       var p = $('p', el);
-      if (p) p.innerHTML = '<a href="' + telHref(infos.phonePizzeria) +
+      if (p) p.innerHTML = '<a href="' + esc(telHref(infos.phonePizzeria)) +
         '" class="link-underline" style="color:var(--camel-deep)">' +
         esc(infos.phonePizzeria) + '</a><br>' + esc(infos.bookingNote);
     });
@@ -216,7 +251,7 @@
     $$('[data-content="contact-enzo"]').forEach(function(el) {
       el.innerHTML =
         '<p>' + esc(a.line1) + '<br>' + esc(a.postalCode) + ' ' + esc(a.city) + '</p>' +
-        '<p>T\u00e9l\u00e9phone\u00a0: <a href="' + telHref(infos.phonePizzeria) + '">' +
+        '<p>T\u00e9l\u00e9phone\u00a0: <a href="' + esc(telHref(infos.phonePizzeria)) + '">' +
           esc(infos.phonePizzeria) + '</a></p>' +
         '<p>R\u00e9servation ' + esc(infos.bookingNote.toLowerCase()) + '</p>';
     });
@@ -253,7 +288,7 @@
     $$('[data-content="announcement"]').forEach(function(el) {
       if (infos.announcement && infos.announcement.trim()) {
         el.innerHTML = '<div class="announcement-banner">' + esc(infos.announcement) + '</div>';
-        el.style.display = '';
+        el.style.display = 'block';
       }
     });
 
@@ -357,10 +392,14 @@
   .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(function(data) {
     if (!data || typeof data !== 'object') return;
-    if (data.specials) applySpecials(data.specials);
-    if (data.specials && data.menu) applyMenuNav(data.specials, data.menu);
-    if (data.menu) applyMenuBody(data.menu);
-    if (data.infos) applyInfos(data.infos);
+    try { if (data.specials) applySpecials(data.specials); }
+    catch (e) { console.warn('[content] specials: ' + e.message); }
+    try { if (data.specials && data.menu) applyMenuNav(data.specials, data.menu); }
+    catch (e) { console.warn('[content] menu-nav: ' + e.message); }
+    try { if (data.menu) applyMenuBody(data.menu); }
+    catch (e) { console.warn('[content] menu: ' + e.message); }
+    try { if (data.infos) applyInfos(data.infos); }
+    catch (e) { console.warn('[content] infos: ' + e.message); }
     rebindMenu();
   })
   .catch(function(err) { console.warn('[content] ' + err.message); });
