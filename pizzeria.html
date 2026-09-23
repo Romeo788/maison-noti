@@ -51,7 +51,7 @@ setTimeout(function () {
 <link rel="stylesheet" href="style.css">
 
 <!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
+<script type="application/ld+json" id="jsonld-restaurant">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
@@ -138,6 +138,8 @@ setTimeout(function () {
   </nav>
 </header>
 
+<div data-content="announcement"></div>
+
 <main>
 
   <!-- Hero -->
@@ -174,7 +176,7 @@ setTimeout(function () {
   <section class="tight-top">
     <div class="container">
       <div class="menu-layout">
-        <nav class="menu-nav reveal-left" aria-label="Catégories de la carte">
+        <nav class="menu-nav reveal-left" aria-label="Catégories de la carte" data-content="menu-nav">
           <a href="#moment" class="menu-nav-item active" data-target="moment"><span>Pizzas du moment</span><span class="count">4</span></a>
           <a href="#classiques" class="menu-nav-item" data-target="classiques"><span>Les classiques</span><span class="count">21</span></a>
           <a href="#blanches" class="menu-nav-item" data-target="blanches"><span>Les blanches</span><span class="count">4</span></a>
@@ -183,7 +185,7 @@ setTimeout(function () {
           <a href="#desserts" class="menu-nav-item" data-target="desserts"><span>Desserts</span><span class="count">3</span></a>
         </nav>
 
-        <div>
+        <div data-content="menu">
           <!-- =========================================================
                PIZZAS DU MOMENT — à mettre à jour au fil des saisons.
 
@@ -207,7 +209,7 @@ setTimeout(function () {
 
             <p class="moment-intro">Quelques semaines par an seulement. Cindy sort de la carte et compose autour des produits de saison — dès qu'ils quittent le marché, la pizza quitte l'ardoise. <strong>Prix affichés en salle.</strong></p>
 
-            <div class="moment-grid">
+            <div class="moment-grid" data-content="specials">
               <article class="moment-card" data-mois="8,9">
                 <div class="moment-card-media">
                   <img src="img/pizza-figues-framboises.jpg"
@@ -367,7 +369,7 @@ setTimeout(function () {
           </div>
 
           <!-- Suppléments -->
-          <div class="supplements reveal">
+          <div class="supplements reveal" data-content="supplements">
             <span class="eyebrow">Suppléments</span>
             <span><strong>Burrata</strong> 5 €</span>
             <span><strong>Légumes</strong> 1,90 €</span>
@@ -429,8 +431,8 @@ setTimeout(function () {
         </a>
         <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines à fermentation lente et pâtes fraîches faites maison, à L'Isle-sur-la-Sorgue.</p>
       </div>
-      <div class="footer-col"><h4>Enzo Pizza</h4><p>271 Cours Fernande Peyre</p><p>84800 L'Isle-sur-la-Sorgue</p><a href="tel:0490202120">04 90 20 21 20</a></div>
-      <div class="footer-col"><h4>Maison NOTI</h4><p>Luberon et alentours</p><a href="tel:0669471123">06 69 47 11 23</a></div>
+      <div class="footer-col" data-content="footer-enzo"><h4>Enzo Pizza</h4><p>271 Cours Fernande Peyre</p><p>84800 L'Isle-sur-la-Sorgue</p><a href="tel:0490202120">04 90 20 21 20</a></div>
+      <div class="footer-col" data-content="footer-noti"><h4>Maison NOTI</h4><p>Luberon et alentours</p><a href="tel:0669471123">06 69 47 11 23</a></div>
       <div class="footer-col"><h4>Liens</h4><a href="/pizzeria">Notre carte</a><a href="/traiteur">Maison NOTI</a><a href="/galerie">Galerie</a><a href="/contact">Contact</a><a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" target="_blank" rel="noopener">Uber Eats</a><a href="https://www.instagram.com/enzopizza84800/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/Enzopizza84800/" target="_blank" rel="noopener">Facebook</a></div>
     </div>
     <div class="footer-bottom">
@@ -443,5 +445,6 @@ setTimeout(function () {
 <div class="float-cta"><a href="https://www.ubereats.com/fr/store/enzo-pizza/kTQeTWAKRsqE3fLryTkegg" class="btn btn-fill" target="_blank" rel="noopener" aria-label="Commander sur Uber Eats">Uber Eats</a></div>
 
 <script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
+<script src="js/content.js" defer></script>
 </body>
 </html>

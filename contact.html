@@ -48,7 +48,7 @@ setTimeout(function () {
 <meta name="twitter:image" content="https://maison-noti.com/img/pizza-truffe-roquette.jpg">
 
 <!-- JSON-LD -->
-<script type="application/ld+json">
+<script type="application/ld+json" id="jsonld-restaurant">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -141,6 +141,8 @@ setTimeout(function () {
     </div>
   </nav>
 </header>
+
+<div data-content="announcement"></div>
 
 <main>
 
@@ -307,7 +309,7 @@ setTimeout(function () {
                 <span class="tag-outline" style="margin-top: 4px;">Pizzeria · 7j/7</span>
               </div>
             </div>
-            <div class="contact-card-body">
+            <div class="contact-card-body" data-content="contact-enzo">
               <p>271 Cours Fernande Peyre<br>84800 L'Isle-sur-la-Sorgue</p>
               <p>Téléphone : <a href="tel:0490202120">04 90 20 21 20</a></p>
               <p>Réservation fortement conseillée</p>
@@ -329,7 +331,7 @@ setTimeout(function () {
                 <span class="tag-outline" style="margin-top: 4px;">Traiteur · Sur réservation</span>
               </div>
             </div>
-            <div class="contact-card-body">
+            <div class="contact-card-body" data-content="contact-noti">
               <p>Événementiel en Luberon<br>et alentours</p>
               <p>Téléphone : <a href="tel:0669471123">06 69 47 11 23</a></p>
               <p>Devis gratuit — dès 30 convives</p>
@@ -358,7 +360,7 @@ setTimeout(function () {
                 <h3 style="color: var(--bg);">Horaires d'ouverture</h3>
               </div>
             </div>
-            <div class="contact-card-body">
+            <div class="contact-card-body" data-content="contact-hours">
               <p style="color: rgba(251, 246, 239, 0.68);">
                 <strong style="color: var(--blush);">Enzo Pizza</strong><br>
                 Ouvert 7j/7 · 17h–22h<br>
@@ -426,15 +428,15 @@ setTimeout(function () {
         <h2 class="mt-2xs mx-auto">L'essentiel <span class="italic-display">en un coup d'œil</span></h2>
       </div>
       <div class="info-trio">
-        <div class="info-trio-item reveal">
+        <div class="info-trio-item reveal" data-content="address">
           <span class="eyebrow">Adresse</span>
           <p>271 Cours Fernande Peyre<br>84800 L'Isle-sur-la-Sorgue</p>
         </div>
-        <div class="info-trio-item reveal">
+        <div class="info-trio-item reveal" data-content="hours">
           <span class="eyebrow">Horaires</span>
           <p>Ouvert 7j/7 · 17h–22h<br>Lundi &amp; jeudi jusqu'à 21h30</p>
         </div>
-        <div class="info-trio-item reveal">
+        <div class="info-trio-item reveal" data-content="phones">
           <span class="eyebrow">Réservation</span>
           <p><a href="tel:0490202120" class="link-underline" style="color: var(--camel-deep);">04 90 20 21 20</a><br>Fortement conseillée</p>
         </div>
@@ -463,13 +465,13 @@ setTimeout(function () {
         </a>
         <p style="max-width: 320px; color: rgba(251,246,239,0.68); font-size:0.9rem;">Pizzas napolitaines à fermentation lente et pâtes fraîches faites maison, à L'Isle-sur-la-Sorgue.</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-content="footer-enzo">
         <h4>Enzo Pizza</h4>
         <p>271 Cours Fernande Peyre</p>
         <p>84800 L'Isle-sur-la-Sorgue</p>
         <a href="tel:0490202120">04 90 20 21 20</a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-content="footer-noti">
         <h4>Maison NOTI</h4>
         <p>Luberon et alentours</p>
         <a href="tel:0669471123">06 69 47 11 23</a>
@@ -493,5 +495,6 @@ setTimeout(function () {
 </footer>
 
 <script src="script.js" onerror="document.documentElement.classList.add('no-js')"></script>
+<script src="js/content.js" defer></script>
 </body>
 </html>
