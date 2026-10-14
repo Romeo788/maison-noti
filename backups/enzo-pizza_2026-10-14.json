@@ -1,0 +1,559 @@
+{
+    "menu": {
+        "categories": [
+            {
+                "id": "classiques",
+                "name": "Les classiques",
+                "items": [
+                    {
+                        "id": "focaccia-mini",
+                        "name": "Focaccia Mini",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 3.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "P\u00e2te maison l\u00e9g\u00e8re, huile d'olive, sel, et origan."
+                    },
+                    {
+                        "id": "margherita",
+                        "name": "Margherita",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 11.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, mozzarella fior di latte, basilic."
+                    },
+                    {
+                        "id": "veritable-margherita",
+                        "name": "V\u00e9ritable Margherita",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, burrata, basilic."
+                    },
+                    {
+                        "id": "anchois",
+                        "name": "Anchois",
+                        "tags": [],
+                        "price": 12.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, ails confits, olives, anchois, huile d'olive, origan."
+                    },
+                    {
+                        "id": "romaine",
+                        "name": "Romaine",
+                        "tags": [],
+                        "price": 12.5,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, jambon blanc, mozzarella fior di latte."
+                    },
+                    {
+                        "id": "regina",
+                        "name": "Regina",
+                        "tags": [],
+                        "price": 13.5,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, jambon blanc, champignons frais, mozzarella fior di latte."
+                    },
+                    {
+                        "id": "quattro-formaggi",
+                        "name": "Quattro Formaggi",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate ou cr\u00e8me, roquefort AOP, mozzarella fior di latte, emmental, Taleggio."
+                    },
+                    {
+                        "id": "salamech",
+                        "name": "Salamech",
+                        "tags": [],
+                        "price": 12.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, spianata ou merguez, mozzarella fior di latte."
+                    },
+                    {
+                        "id": "diavola",
+                        "name": "Diavola",
+                        "tags": [
+                            "epice"
+                        ],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de poivrons rouges, merguez ou spianata, oignons confits, mozzarella fior di latte, apr\u00e8s cuisson crumble de tomate, miel \u00e9pic\u00e9."
+                    },
+                    {
+                        "id": "provencale",
+                        "name": "Proven\u00e7ale",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, aubergines frites, oignons confits, ails confits, poivrons marin\u00e9s, viandes hach\u00e9es, mozzarella fior di latte, apr\u00e8s cuisson romarin."
+                    },
+                    {
+                        "id": "parmigiana",
+                        "name": "Parmigiana",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, aubergines frites, cr\u00e8mes de grana, mozzarella fior di latte, apr\u00e8s cuisson copeaux de grana, basilic."
+                    },
+                    {
+                        "id": "tchatchouka",
+                        "name": "Tchatchouka",
+                        "tags": [],
+                        "price": 13.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, oignons confits, poivrons marin\u00e9s, mozzarella fior di latte, apr\u00e8s cuisson jaune d'\u0153uf."
+                    },
+                    {
+                        "id": "verdura",
+                        "name": "Verdura",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 15.5,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, aubergines frites, poivrons marin\u00e9s, artichauts romains, apr\u00e8s cuisson copeaux de grana, pesto roquette."
+                    },
+                    {
+                        "id": "mama",
+                        "name": "Mama",
+                        "tags": [],
+                        "price": 15.5,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, guanciale, spianata, poivrons marin\u00e9s apr\u00e8s cuisson, basilic, jambon cru."
+                    },
+                    {
+                        "id": "donald",
+                        "name": "Donald",
+                        "tags": [],
+                        "price": 15.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, cheddar, viande hach\u00e9e, mozzarella fior di latte, apr\u00e8s cuisson cornichons, oignons frits."
+                    },
+                    {
+                        "id": "carbonara",
+                        "name": "Carbonara",
+                        "tags": [],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de grana, guanciale, mozzarella fior di latte, apr\u00e8s cuisson p\u00e9corino, jaune d'\u0153uf, grains de poivre."
+                    },
+                    {
+                        "id": "pollo",
+                        "name": "Pollo",
+                        "tags": [],
+                        "price": 13.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de curry, poulet, mozzarella fior di latte."
+                    },
+                    {
+                        "id": "doudou",
+                        "name": "Doudou",
+                        "tags": [],
+                        "price": 15.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de cajun, poulet, poivrons, mozzarella fior di latte, apr\u00e8s cuisson noix de cajou, tomate s\u00e9ch\u00e9e."
+                    },
+                    {
+                        "id": "amo",
+                        "name": "Amo",
+                        "tags": [
+                            "coup-de-coeur"
+                        ],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, artichaut romain, apr\u00e8s cuisson jambon blanc sup\u00e9rieur, burrata, tomate s\u00e9ch\u00e9e, roquette, pesto de roquette."
+                    },
+                    {
+                        "id": "italia",
+                        "name": "Italia",
+                        "tags": [],
+                        "price": 16.5,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate apr\u00e8s cuisson jambon cru, tomate s\u00e9ch\u00e9e, pignons, roquette, copeaux de grana, basilic."
+                    },
+                    {
+                        "id": "marakchi",
+                        "name": "Marakchi",
+                        "tags": [],
+                        "price": 15.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me, oignons confits, sauce blanche, kebab, mozzarella fior di latte."
+                    }
+                ],
+                "tagline": "la carte toute l'ann\u00e9e"
+            },
+            {
+                "id": "blanches",
+                "name": "Les blanches",
+                "items": [
+                    {
+                        "id": "dodu",
+                        "name": "Dodu",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me, Taleggio, mozzarella fior di latte, apr\u00e8s cuisson sgrassatella (m\u00e9lange coppa, pancetta), huile de cacahu\u00e8te, \u00e9clats de cacahu\u00e8tes."
+                    },
+                    {
+                        "id": "sorriso",
+                        "name": "Sorriso",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Base cr\u00e8me, cab\u00e9cou, mozzarella fior di latte, apr\u00e8s cuisson sgrassatella (m\u00e9lange coppa, pancetta), miel de romarin, romarin."
+                    },
+                    {
+                        "id": "miele",
+                        "name": "Miele",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me, cab\u00e9cou, mozzarella fior di latte, apr\u00e8s cuisson miel."
+                    },
+                    {
+                        "id": "nemo",
+                        "name": "Nemo",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de persil, saumon fum\u00e9, mozzarella fior di latte, persil."
+                    }
+                ],
+                "tagline": "sans sauce tomate"
+            },
+            {
+                "id": "pates",
+                "name": "P\u00e2tes fra\u00eeches",
+                "items": [
+                    {
+                        "id": "gnocchis-semplice",
+                        "name": "Gnocchis Semplice",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 13.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Huile d'olive, ails confits, tomates s\u00e9ch\u00e9es, copeaux de Grana."
+                    },
+                    {
+                        "id": "gnocchis-inspi-carbo",
+                        "name": "Gnocchis Inspi Carbo",
+                        "tags": [],
+                        "price": 15.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de parmesan, guanciale croustillant, copeaux de p\u00e9corino, jaune d'\u0153uf, grains de poivre."
+                    },
+                    {
+                        "id": "gnocchis-pomodoro",
+                        "name": "Gnocchis Pomodoro",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 15.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Sauce tomate, burrata, basilic, tomate s\u00e9ch\u00e9e."
+                    },
+                    {
+                        "id": "gnocchis-dodu",
+                        "name": "Gnocchis Dodu",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de Taleggio, sgrassatella (m\u00e9lange de pancetta coppa), huile de cacahu\u00e8tes, \u00e9clats de cacahu\u00e8tes."
+                    },
+                    {
+                        "id": "gnocchis-nemo",
+                        "name": "Gnocchis Nemo",
+                        "tags": [],
+                        "price": 16.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Cr\u00e8me de persil, saumon fum\u00e9, persil."
+                    },
+                    {
+                        "id": "raviolis-frais",
+                        "name": "Raviolis frais",
+                        "tags": [],
+                        "price": null,
+                        "available": true,
+                        "priceNote": "Prix selon composition",
+                        "description": "\u00c0 d\u00e9couvrir sur l'ardoise ! Une recette selon les envies du chef."
+                    },
+                    {
+                        "id": "gnocchis-detail",
+                        "name": "Gnocchis au d\u00e9tail",
+                        "tags": [],
+                        "price": 0.99,
+                        "available": true,
+                        "priceNote": "/ 100g",
+                        "description": "Gnocchis frais crus, \u00e0 emporter pour les cuisiner chez vous."
+                    }
+                ],
+                "tagline": "faites maison, chaque jour"
+            },
+            {
+                "id": "partager",
+                "name": "\u00c0 partager",
+                "items": [
+                    {
+                        "id": "burrata-classique",
+                        "name": "Burrata Classique \u2014 mini",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 8.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Roquette, burrata, basilic, tomate s\u00e9ch\u00e9e."
+                    },
+                    {
+                        "id": "burrata-parmigiana",
+                        "name": "Burrata Parmigiana \u2014 mini",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 9.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Aubergines frites, burrata, tomates s\u00e9ch\u00e9es, basilic."
+                    },
+                    {
+                        "id": "salade-italienne",
+                        "name": "Salade Italienne",
+                        "tags": [],
+                        "price": 14.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Roquette, burrata, l\u00e9gumes du moment, jambon cru, basilic."
+                    }
+                ],
+                "tagline": "\u2026 ou pas"
+            },
+            {
+                "id": "desserts",
+                "name": "Desserts",
+                "items": [
+                    {
+                        "id": "tiramisu",
+                        "name": "Tiramisu",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 4.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Tiramisu du moment, recette maison."
+                    },
+                    {
+                        "id": "piccola-nutella",
+                        "name": "Piccola Nutella",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 12.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Petite pizza au mascarpone, nutella, \u00e9clats de noisettes."
+                    },
+                    {
+                        "id": "zeppoline",
+                        "name": "Zeppoline",
+                        "tags": [
+                            "veggie"
+                        ],
+                        "price": 9.9,
+                        "available": true,
+                        "priceNote": null,
+                        "description": "Beignets de p\u00e2te \u00e0 pizza frits, sucre, avec topping au choix : nutella, noisette ou pistache."
+                    }
+                ],
+                "tagline": "pour finir en douceur"
+            }
+        ],
+        "supplements": [
+            {
+                "id": "sup-burrata",
+                "name": "Burrata",
+                "price": 5
+            },
+            {
+                "id": "sup-legumes",
+                "name": "L\u00e9gumes",
+                "price": 1.9
+            },
+            {
+                "id": "sup-fromage",
+                "name": "Fromage",
+                "price": 2.9
+            },
+            {
+                "id": "sup-charcuterie",
+                "name": "Charcuteries / viandes",
+                "price": 3.9
+            },
+            {
+                "id": "sup-oeuf",
+                "name": "\u0152uf",
+                "price": 1.5
+            },
+            {
+                "id": "sup-salade",
+                "name": "Salade",
+                "price": 3.5
+            }
+        ]
+    },
+    "infos": {
+        "hours": {
+            "fri": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "22:00"
+                    }
+                ],
+                "closed": false
+            },
+            "mon": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "21:30"
+                    }
+                ],
+                "closed": false
+            },
+            "sat": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "22:00"
+                    }
+                ],
+                "closed": false
+            },
+            "sun": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "22:00"
+                    }
+                ],
+                "closed": false
+            },
+            "thu": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "21:30"
+                    }
+                ],
+                "closed": false
+            },
+            "tue": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "22:00"
+                    }
+                ],
+                "closed": false
+            },
+            "wed": {
+                "slots": [
+                    {
+                        "open": "17:00",
+                        "close": "22:00"
+                    }
+                ],
+                "closed": false
+            }
+        },
+        "address": {
+            "city": "L'Isle-sur-la-Sorgue",
+            "line1": "271 Cours Fernande Peyre",
+            "postalCode": "84800"
+        },
+        "bookingNote": "Fortement conseill\u00e9e, surtout le week-end",
+        "announcement": "",
+        "phonePizzeria": "04 90 20 21 20",
+        "phoneTraiteur": "06 69 47 11 23"
+    },
+    "specials": {
+        "items": [
+            {
+                "id": "figues-framboises",
+                "name": "Figues & framboises",
+                "active": true,
+                "season": "Fin d'\u00e9t\u00e9",
+                "imageUrl": "https://maison-noti.com/img/pizza-figues-framboises.jpg",
+                "description": "Base cr\u00e8me, mozzarella fior di latte, jambon cru, figues r\u00f4ties, framboises et m\u00fbres fra\u00eeches."
+            },
+            {
+                "id": "melon-prosciutto",
+                "name": "Melon & prosciutto",
+                "active": true,
+                "season": "\u00c9t\u00e9",
+                "imageUrl": "https://maison-noti.com/img/pizza-melon-prosciutto.jpg",
+                "description": "Sauce tomate, mesclun, billes de melon, tomates cerises, perles de mozzarella, jambon cru, pesto."
+            },
+            {
+                "id": "petits-pois-guanciale",
+                "name": "Petits pois & guanciale",
+                "active": true,
+                "season": "Printemps",
+                "imageUrl": "https://maison-noti.com/img/pizza-petits-pois.jpg",
+                "description": "Cr\u00e8me de petits pois, petits pois frais, guanciale croustillant, perles de mozzarella, olives taggiasche."
+            },
+            {
+                "id": "mortadelle-truffe",
+                "name": "Mortadelle & truffe",
+                "active": true,
+                "season": "Automne",
+                "imageUrl": "https://maison-noti.com/img/pizza-mortadelle-truffe.jpg",
+                "description": "Cr\u00e8me de truffe, mortadelle, stracciatella, lamelles de truffe fra\u00eeche."
+            }
+        ]
+    }
+}
