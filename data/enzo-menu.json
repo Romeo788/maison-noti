@@ -1,0 +1,461 @@
+{
+  "categories": [
+    {
+      "id": "classiques",
+      "name": "Pizzas",
+      "tagline": "Origan et olives sur toutes les pizzas",
+      "items": [
+        {
+          "id": "olio",
+          "name": "Olio",
+          "description": "P\u00e2te \u00e0 pizza, huile d\u2019olive, origan, sel.",
+          "price": 5.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "marinara",
+          "name": "Marinara",
+          "description": "Base tomate, ail, huile d\u2019olive.",
+          "price": 11.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "anchois",
+          "name": "Anchois",
+          "description": "Base tomate, anchois, ail, olives.",
+          "price": 12.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "la-bonne-mere",
+          "name": "La Bonne M\u00e8re",
+          "description": "Base tomate moiti\u00e9-moiti\u00e9, anchois, emmental.",
+          "price": 13.5,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "margherita",
+          "name": "Margherita",
+          "description": "Base tomate, mozzarella fior di latte, basilou.",
+          "price": 11.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "quattro-formaggi",
+          "name": "4 Fromages",
+          "description": "Base tomate ou cr\u00e8me, taleggio, emmental, mozzarella fior di latte, gorgonzola.",
+          "price": 14.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "salamech",
+          "name": "Piquante",
+          "description": "Base tomate, spianata, mozzarella fior di latte.",
+          "price": 12.9,
+          "priceNote": null,
+          "tags": ["epice"],
+          "available": true
+        },
+        {
+          "id": "romaine",
+          "name": "Romaine",
+          "description": "Base tomate, jambon blanc, mozzarella fior di latte.",
+          "price": 12.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "regina",
+          "name": "Regina",
+          "description": "Base tomate, jambon blanc, champignons frais, mozzarella fior di latte. Suppl\u00e9ment \u0153uf : 1,50 \u20ac.",
+          "price": 13.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "pepe",
+          "name": "P\u00e9p\u00e9",
+          "description": "Base tomate, pepperoni, mozzarella fior di latte.",
+          "price": 13.5,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "miele",
+          "name": "Miele",
+          "description": "Base cr\u00e8me, cab\u00e9cou, mozzarella fior di latte.",
+          "price": 14.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "mama",
+          "name": "Mama",
+          "description": "Base tomate, spianata, guanciale, mozzarella fior di latte, jambon cru, basilou.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "tchatchouka",
+          "name": "Tchatchouka",
+          "description": "Base tomate, oignons confits, poivrons, mozzarella fior di latte, \u0153uf.",
+          "price": 13.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "carbonara",
+          "name": "Carbonara",
+          "description": "Cr\u00e8me de grana, guanciale, mozzarella fior di latte, copeaux de pecorino, \u0153uf, grains de poivre.",
+          "price": 14.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "parmigiana",
+          "name": "Parmigiana",
+          "description": "Base tomate, aubergines frites, cr\u00e8me de grana, mozzarella fior di latte, copeaux de grana, basilou.",
+          "price": 15.5,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "provencale",
+          "name": "Proven\u00e7ale",
+          "description": "Base tomate, aubergines frites, ail, oignons confits, poivrons marin\u00e9s, viande hach\u00e9e, mozzarella fior di latte, romarin.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "donald",
+          "name": "Kentucky",
+          "description": "Base tomate, cheddar, viande hach\u00e9e, mozzarella fior di latte, sauce burger, oignons rouges, chips de guanciale.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "verdura-d-hiver",
+          "name": "Verdura d\u2019Hiver",
+          "description": "Base cr\u00e8me, oignons confits, butternut, champignons frais, pesto de noix, \u00e9clats de noix, jeunes pousses.",
+          "price": 15.5,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "tartichouette",
+          "name": "Tartichouette",
+          "description": "Base cr\u00e8me, guanciale, oignons confits, pommes de terre r\u00f4ties au four, taleggio, mozzarella fior di latte.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "pizza-raclettement-bon",
+          "name": "Raclettement Bon",
+          "description": "Cr\u00e8me d\u2019oignons confits, raclette, oignons confits, mozzarella fior di latte, pancetta r\u00f4tie, jeunes pousses.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "dimanche-soir",
+          "name": "Dimanche Soir",
+          "description": "Cr\u00e8me, raclette, pommes de terre r\u00f4ties au four, mozzarella fior di latte, jambon blanc, oignons rouges.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "pizza-noti",
+          "name": "Noti",
+          "description": "Cr\u00e8me de butternut, butternut, fontina, mozzarella fior di latte, speck, graines de courge, ail fum\u00e9.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "renaud",
+          "name": "Renaud",
+          "description": "Cr\u00e8me de butternut, butternut, guanciale, mozzarella fior di latte, pesto de noix, noix, burrata, jeunes pousses.",
+          "price": 17.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "pizza-castagna",
+          "name": "Castagna",
+          "description": "Cr\u00e8me de ch\u00e2taigne, fontina, mozzarella fior di latte, copeaux de grana, speck, \u00e9clats de ch\u00e2taigne.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "la-gigi",
+          "name": "La Gigi",
+          "description": "Base cr\u00e8me ou tomate, fontina, taleggio, reblochon, mozzarella fior di latte, copeaux de pecorino.",
+          "price": 16.5,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "louise",
+          "name": "Louise",
+          "description": "Base cr\u00e8me, cab\u00e9cou, pancetta, thym, mozzarella fior di latte, crumble thym-miel, miel.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "gaston",
+          "name": "Gaston",
+          "description": "Cr\u00e8me d\u2019oignons confits, reblochon, pommes de terre r\u00f4ties, oignons confits, mozzarella, jambon blanc.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "amo",
+          "name": "Amore",
+          "description": "Base tomate, mozzarella fior di latte, jambon cru, jeunes pousses, burrata, pesto genovese, copeaux de grana, pignons.",
+          "price": 17.9,
+          "priceNote": null,
+          "tags": ["coup-de-coeur"],
+          "available": true
+        },
+        {
+          "id": "moussaka",
+          "name": "Moussaka",
+          "description": "Sauce tomate, aubergines, sauge, viande hach\u00e9e, cr\u00e8me, mozzarella fior di latte.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "marakchi",
+          "name": "Marakchi",
+          "description": "Base cr\u00e8me, sauce blanche, oignons confits, kebab, mozzarella fior di latte.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "benedicte",
+          "name": "B\u00e9n\u00e9dicte",
+          "description": "Base cr\u00e8me, gorgonzola, jambon blanc, champignons frais, mozzarella fior di latte, \u0153uf.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pates",
+      "name": "P\u00e2tes fra\u00eeches",
+      "tagline": "faites maison, chaque jour",
+      "items": [
+        {
+          "id": "gnocchis-detail",
+          "name": "Gnocchis frais au poids",
+          "description": "Nos gnocchis sont fa\u00e7onn\u00e9s sur place pour vous garantir une fra\u00eecheur et une l\u00e9g\u00e8ret\u00e9 incomparables.",
+          "price": 0.99,
+          "priceNote": "/ 100 g",
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "gnocchis-inspi-carbo",
+          "name": "Inspi Carbo",
+          "description": "Cr\u00e8me de grana, chips de guanciale, copeaux de pecorino, grains de poivre, jaune d\u2019\u0153uf.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "gnocchi-castagna",
+          "name": "Castagna",
+          "description": "Cr\u00e8me de ch\u00e2taigne, speck, copeaux de grana, \u00e9miett\u00e9 de ch\u00e2taignes.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "gnocchi-raclettement-bon",
+          "name": "Raclettement Bon",
+          "description": "Cr\u00e8me d\u2019oignons confits, raclette, oignons confits, pancetta r\u00f4tie.",
+          "price": 16.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "pigno",
+          "name": "Pigno",
+          "description": "Pesto genovese, pignons, copeaux de grana.",
+          "price": 13.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "zola-et-guancia",
+          "name": "Zola et Guancia",
+          "description": "Cr\u00e8me de gorgonzola, chips de guanciale.",
+          "price": 15.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "ala-bolo",
+          "name": "Ala Bolo",
+          "description": "Sauce tomate, viande hach\u00e9e, copeaux de grana.",
+          "price": 14.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "gnocchi-noti",
+          "name": "Noti",
+          "description": "Cr\u00e8me de butternut, butternut, burrata, speck, graines de courge.",
+          "price": null,
+          "priceNote": "Prix sur place",
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "gnocchis-frits",
+          "name": "Gnocchis frits au cheddar",
+          "description": "Gnocchis frits au cheddar.",
+          "price": null,
+          "priceNote": "M 9,90 \u20ac \u00b7 L 14,90 \u20ac",
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "raviolis-frais",
+          "name": "Raviolis frais",
+          "description": "Une fois par semaine, r\u00e9alis\u00e9s \u00e0 la main (vendredi, samedi ou dimanche). Recette \u00e0 l\u2019ardoise.",
+          "price": null,
+          "priceNote": "Prix selon composition",
+          "tags": [],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "partager",
+      "name": "\u00c0 partager",
+      "tagline": "\u2026 ou pas",
+      "items": [
+        {
+          "id": "focaccia-fraiche",
+          "name": "Focaccia fra\u00eeche",
+          "description": "Une fois par semaine.",
+          "price": 3.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "burrata-classique",
+          "name": "Burrata",
+          "description": "Roquette, pesto genovese, pignons.",
+          "price": 7.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        },
+        {
+          "id": "burrata-parmigiana",
+          "name": "Burrata Parmigiana",
+          "description": "Sauce tomate, aubergines, burrata, basilou, copeaux de grana.",
+          "price": 8.9,
+          "priceNote": null,
+          "tags": ["veggie"],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "tagline": "pour finir en douceur",
+      "items": [
+        {
+          "id": "tiramisu",
+          "name": "Tiramisu",
+          "description": "Go\u00fbt du jour.",
+          "price": 4.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "piccola-nutella",
+          "name": "Piccola",
+          "description": "Petite pizza remplie de douceur : mascarpone au Nutella, \u00e0 la cr\u00e8me de marron ou \u00e0 la noisette (1 au choix).",
+          "price": 12.9,
+          "priceNote": null,
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "zeppoline",
+          "name": "Zeppoline",
+          "description": "Beignets de p\u00e2te \u00e0 pizza frits, presque mieux qu\u2019un churros. Garniture au choix : Nutella, pistache, noisette, cr\u00e8me de marron, chocolat ou caramel.",
+          "price": null,
+          "priceNote": "Au sucre 9,90 \u20ac \u00b7 Garnie 11,90 \u20ac",
+          "tags": [],
+          "available": true
+        }
+      ]
+    }
+  ],
+  "supplements": [
+    { "id": "sup-burrata", "name": "Burrata", "price": 5 },
+    { "id": "sup-legumes", "name": "L\u00e9gumes", "price": 2.9 },
+    { "id": "sup-fromage", "name": "Fromages", "price": 3.9 },
+    { "id": "sup-charcuterie", "name": "Charcuterie ou viande", "price": 4.9 }
+  ]
+}

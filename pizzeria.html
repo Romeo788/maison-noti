@@ -178,10 +178,9 @@ setTimeout(function () {
       <div class="menu-layout">
         <nav class="menu-nav reveal-left" aria-label="Catégories de la carte" data-content="menu-nav">
           <a href="#moment" class="menu-nav-item active" data-target="moment"><span>Pizzas du moment</span><span class="count">4</span></a>
-          <a href="#classiques" class="menu-nav-item" data-target="classiques"><span>Les classiques</span><span class="count">21</span></a>
-          <a href="#blanches" class="menu-nav-item" data-target="blanches"><span>Les blanches</span><span class="count">4</span></a>
-          <a href="#pates" class="menu-nav-item" data-target="pates"><span>Pâtes fraîches</span><span class="count">7</span></a>
-          <a href="#plats" class="menu-nav-item" data-target="plats"><span>À partager</span><span class="count">3</span></a>
+          <a href="#classiques" class="menu-nav-item" data-target="classiques"><span>Pizzas</span><span class="count">31</span></a>
+          <a href="#pates" class="menu-nav-item" data-target="pates"><span>Pâtes fraîches</span><span class="count">10</span></a>
+          <a href="#partager" class="menu-nav-item" data-target="partager"><span>À partager</span><span class="count">3</span></a>
           <a href="#desserts" class="menu-nav-item" data-target="desserts"><span>Desserts</span><span class="count">3</span></a>
         </nav>
 
@@ -264,119 +263,84 @@ setTimeout(function () {
             </div>
           </div>
 
-          <!-- Les classiques — ancre #classiques.
-               Section renommée : 6 pizzas qu'elle contient sont sur base crème
-               (Diavola, Carbonara, Pollo, Doudou, Marakchi, Quattro Formaggi).
-               L'ordre des pizzas est celui voulu par la cheffe : ne pas le changer. -->
+          <!-- Pizzas — ancre #classiques (31 pizzas, base tomate et crème confondues) -->
           <div class="menu-category reveal" id="classiques">
-            <div class="menu-category-head"><h2>Les classiques</h2><span class="menu-cat-note">la carte toute l'année</span></div>
+            <div class="menu-category-head"><h2>Pizzas</h2><span class="menu-cat-note">Origan et olives sur toutes les pizzas</span></div>
 
-            <div class="menu-item"><div><div class="menu-item-name">Focaccia Mini <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Pâte maison légère, huile d'olive, sel, et origan.</p></div><div class="menu-item-price">3,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Margherita <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, mozzarella fior di latte, basilic.</p></div><div class="menu-item-price">11,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Véritable Margherita <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, burrata, basilic.</p></div><div class="menu-item-price">14,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Anchois</div><p class="menu-item-desc">Sauce tomate, ails confits, olives, anchois, huile d'olive, origan.</p></div><div class="menu-item-price">12,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Romaine</div><p class="menu-item-desc">Sauce tomate, jambon blanc, mozzarella fior di latte.</p></div><div class="menu-item-price">12,50 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Regina</div><p class="menu-item-desc">Sauce tomate, jambon blanc, champignons frais, mozzarella fior di latte.</p></div><div class="menu-item-price">13,50 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Quattro Formaggi <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate ou crème, roquefort AOP, mozzarella fior di latte, emmental, Taleggio.</p></div><div class="menu-item-price">14,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Salamech</div><p class="menu-item-desc">Sauce tomate, spianata <em>ou</em> merguez, mozzarella fior di latte.</p></div><div class="menu-item-price">12,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Diavola <span class="badge badge-spicy">Épicé</span></div><p class="menu-item-desc">Crème de poivrons rouges, merguez <em>ou</em> spianata, oignons confits, mozzarella fior di latte, après cuisson crumble de tomate, miel épicé.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Provençale</div><p class="menu-item-desc">Sauce tomate, aubergines frites, oignons confits, ails confits, poivrons marinés, viandes hachées, mozzarella fior di latte, après cuisson romarin.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Parmigiana <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, aubergines frites, crèmes de grana, mozzarella fior di latte, après cuisson copeaux de grana, basilic.</p></div><div class="menu-item-price">14,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Tchatchouka</div><p class="menu-item-desc">Sauce tomate, oignons confits, poivrons marinés, mozzarella fior di latte, après cuisson jaune d'œuf.</p></div><div class="menu-item-price">13,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Verdura <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, aubergines frites, poivrons marinés, artichauts romains, après cuisson copeaux de grana, pesto roquette.</p></div><div class="menu-item-price">15,50 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Mama</div><p class="menu-item-desc">Sauce tomate, guanciale, spianata, poivrons marinés après cuisson, basilic, jambon cru.</p></div><div class="menu-item-price">15,50 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Donald</div><p class="menu-item-desc">Sauce tomate, cheddar, viande hachée, mozzarella fior di latte, après cuisson cornichons, oignons frits.</p></div><div class="menu-item-price">15,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Carbonara</div><p class="menu-item-desc">Crème de grana, guanciale, mozzarella fior di latte, après cuisson pécorino, jaune d'œuf, grains de poivre.</p></div><div class="menu-item-price">14,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Pollo</div><p class="menu-item-desc">Crème de curry, poulet, mozzarella fior di latte.</p></div><div class="menu-item-price">13,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Doudou</div><p class="menu-item-desc">Crème de cajun, poulet, poivrons, mozzarella fior di latte, après cuisson noix de cajou, tomate séchée.</p></div><div class="menu-item-price">15,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Amo <span class="badge badge-fav">Coup de cœur</span></div><p class="menu-item-desc">Sauce tomate, artichaut romain, après cuisson jambon blanc supérieur, burrata, tomate séchée, roquette, pesto de roquette.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Italia</div><p class="menu-item-desc">Sauce tomate après cuisson jambon cru, tomate séchée, pignons, roquette, copeaux de grana, basilic.</p></div><div class="menu-item-price">16,50 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Marakchi</div><p class="menu-item-desc">Crème, oignons confits, sauce blanche, kebab, mozzarella fior di latte.</p></div><div class="menu-item-price">15,90 €</div></div>
-          </div>
-
-          <!-- Les blanches — ancre #blanches (inchangée) -->
-          <div class="menu-category reveal" id="blanches">
-            <div class="menu-category-head"><h2>Les blanches</h2><span class="menu-cat-note">sans sauce tomate</span></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Dodu</div><p class="menu-item-desc">Crème, Taleggio, mozzarella fior di latte, après cuisson sgrassatella (mélange coppa, pancetta), huile de cacahuète, éclats de cacahuètes.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Sorriso</div><p class="menu-item-desc">Base crème, cabécou, mozzarella fior di latte, après cuisson sgrassatella (mélange coppa, pancetta), miel de romarin, romarin.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Miele <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Crème, cabécou, mozzarella fior di latte, après cuisson miel.</p></div><div class="menu-item-price">14,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Nemo</div><p class="menu-item-desc">Crème de persil, saumon fumé, mozzarella fior di latte, persil.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Olio <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Pâte à pizza, huile d'olive, origan, sel.</p></div><div class="menu-item-price">5,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Marinara <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base tomate, ail, huile d'olive.</p></div><div class="menu-item-price">11,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Anchois</div><p class="menu-item-desc">Base tomate, anchois, ail, olives.</p></div><div class="menu-item-price">12,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">La Bonne Mère</div><p class="menu-item-desc">Base tomate moitié-moitié, anchois, emmental.</p></div><div class="menu-item-price">13,50 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Margherita <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base tomate, mozzarella fior di latte, basilou.</p></div><div class="menu-item-price">11,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">4 Fromages <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base tomate ou crème, taleggio, emmental, mozzarella fior di latte, gorgonzola.</p></div><div class="menu-item-price">14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Piquante <span class="badge badge-spicy">Épicé</span></div><p class="menu-item-desc">Base tomate, spianata, mozzarella fior di latte.</p></div><div class="menu-item-price">12,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Romaine</div><p class="menu-item-desc">Base tomate, jambon blanc, mozzarella fior di latte.</p></div><div class="menu-item-price">12,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Regina</div><p class="menu-item-desc">Base tomate, jambon blanc, champignons frais, mozzarella fior di latte. Supplément œuf : 1,50 €.</p></div><div class="menu-item-price">13,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Pépé</div><p class="menu-item-desc">Base tomate, pepperoni, mozzarella fior di latte.</p></div><div class="menu-item-price">13,50 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Miele <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base crème, cabécou, mozzarella fior di latte.</p></div><div class="menu-item-price">14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Mama</div><p class="menu-item-desc">Base tomate, spianata, guanciale, mozzarella fior di latte, jambon cru, basilou.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Tchatchouka <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base tomate, oignons confits, poivrons, mozzarella fior di latte, œuf.</p></div><div class="menu-item-price">13,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Carbonara</div><p class="menu-item-desc">Crème de grana, guanciale, mozzarella fior di latte, copeaux de pecorino, œuf, grains de poivre.</p></div><div class="menu-item-price">14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Parmigiana <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base tomate, aubergines frites, crème de grana, mozzarella fior di latte, copeaux de grana, basilou.</p></div><div class="menu-item-price">15,50 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Provençale</div><p class="menu-item-desc">Base tomate, aubergines frites, ail, oignons confits, poivrons marinés, viande hachée, mozzarella fior di latte, romarin.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Kentucky</div><p class="menu-item-desc">Base tomate, cheddar, viande hachée, mozzarella fior di latte, sauce burger, oignons rouges, chips de guanciale.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Verdura d'Hiver <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base crème, oignons confits, butternut, champignons frais, pesto de noix, éclats de noix, jeunes pousses.</p></div><div class="menu-item-price">15,50 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Tartichouette</div><p class="menu-item-desc">Base crème, guanciale, oignons confits, pommes de terre rôties au four, taleggio, mozzarella fior di latte.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Raclettement Bon</div><p class="menu-item-desc">Crème d'oignons confits, raclette, oignons confits, mozzarella fior di latte, pancetta rôtie, jeunes pousses.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Dimanche Soir</div><p class="menu-item-desc">Crème, raclette, pommes de terre rôties au four, mozzarella fior di latte, jambon blanc, oignons rouges.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Noti</div><p class="menu-item-desc">Crème de butternut, butternut, fontina, mozzarella fior di latte, speck, graines de courge, ail fumé.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Renaud</div><p class="menu-item-desc">Crème de butternut, butternut, guanciale, mozzarella fior di latte, pesto de noix, noix, burrata, jeunes pousses.</p></div><div class="menu-item-price">17,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Castagna</div><p class="menu-item-desc">Crème de châtaigne, fontina, mozzarella fior di latte, copeaux de grana, speck, éclats de châtaigne.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">La Gigi <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Base crème ou tomate, fontina, taleggio, reblochon, mozzarella fior di latte, copeaux de pecorino.</p></div><div class="menu-item-price">16,50 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Louise</div><p class="menu-item-desc">Base crème, cabécou, pancetta, thym, mozzarella fior di latte, crumble thym-miel, miel.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Gaston</div><p class="menu-item-desc">Crème d'oignons confits, reblochon, pommes de terre rôties, oignons confits, mozzarella, jambon blanc.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Amore <span class="badge badge-fav">Coup de cœur</span></div><p class="menu-item-desc">Base tomate, mozzarella fior di latte, jambon cru, jeunes pousses, burrata, pesto genovese, copeaux de grana, pignons.</p></div><div class="menu-item-price">17,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Moussaka</div><p class="menu-item-desc">Sauce tomate, aubergines, sauge, viande hachée, crème, mozzarella fior di latte.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Marakchi</div><p class="menu-item-desc">Base crème, sauce blanche, oignons confits, kebab, mozzarella fior di latte.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Bénédicte</div><p class="menu-item-desc">Base crème, gorgonzola, jambon blanc, champignons frais, mozzarella fior di latte, œuf.</p></div><div class="menu-item-price">15,90 €</div></div>
           </div>
 
           <!-- Pâtes fraîches -->
           <div class="menu-category reveal" id="pates">
             <div class="menu-category-head"><h2>Pâtes fraîches</h2><span class="menu-cat-note">faites maison, chaque jour</span></div>
 
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis Semplice <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Huile d'olive, ails confits, tomates séchées, copeaux de Grana.</p></div><div class="menu-item-price">13,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis Inspi Carbo</div><p class="menu-item-desc">Crème de parmesan, guanciale croustillant, copeaux de pécorino, jaune d'œuf, grains de poivre.</p></div><div class="menu-item-price">15,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis Pomodoro <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, burrata, basilic, tomate séchée.</p></div><div class="menu-item-price">15,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis Dodu</div><p class="menu-item-desc">Crème de Taleggio, sgrassatella (mélange de pancetta coppa), huile de cacahuètes, éclats de cacahuètes.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis Nemo</div><p class="menu-item-desc">Crème de persil, saumon fumé, persil.</p></div><div class="menu-item-price">16,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Raviolis frais</div><p class="menu-item-desc">À découvrir sur l'ardoise ! Une recette selon les envies du chef. <strong style="color:var(--ink);">Prix selon composition.</strong></p></div><div class="menu-item-price">—</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Gnocchis au détail</div><p class="menu-item-desc">Gnocchis frais crus, à emporter pour les cuisiner chez vous.</p></div><div class="menu-item-price">0,99 € / 100g</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Gnocchis frais au poids <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Nos gnocchis sont façonnés sur place pour vous garantir une fraîcheur et une légèreté incomparables.</p></div><div class="menu-item-price">0,99 € / 100 g</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Inspi Carbo</div><p class="menu-item-desc">Crème de grana, chips de guanciale, copeaux de pecorino, grains de poivre, jaune d'œuf.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Castagna</div><p class="menu-item-desc">Crème de châtaigne, speck, copeaux de grana, émietté de châtaignes.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Raclettement Bon</div><p class="menu-item-desc">Crème d'oignons confits, raclette, oignons confits, pancetta rôtie.</p></div><div class="menu-item-price">16,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Pigno <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Pesto genovese, pignons, copeaux de grana.</p></div><div class="menu-item-price">13,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Zola et Guancia</div><p class="menu-item-desc">Crème de gorgonzola, chips de guanciale.</p></div><div class="menu-item-price">15,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Ala Bolo</div><p class="menu-item-desc">Sauce tomate, viande hachée, copeaux de grana.</p></div><div class="menu-item-price">14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Noti</div><p class="menu-item-desc">Crème de butternut, butternut, burrata, speck, graines de courge.</p></div><div class="menu-item-price">Prix sur place</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Gnocchis frits au cheddar <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Gnocchis frits au cheddar.</p></div><div class="menu-item-price">M 9,90 € · L 14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Raviolis frais</div><p class="menu-item-desc">Une fois par semaine, réalisés à la main (vendredi, samedi ou dimanche). Recette à l'ardoise.</p></div><div class="menu-item-price">Prix selon composition</div></div>
           </div>
 
           <!-- À partager -->
-          <div class="menu-category reveal" id="plats">
+          <div class="menu-category reveal" id="partager">
             <div class="menu-category-head"><h2>À partager</h2><span class="menu-cat-note">… ou pas</span></div>
 
-            <div class="menu-item"><div><div class="menu-item-name">Burrata Classique <span class="badge badge-veggie">Veggie</span> <em style="font-size:0.8rem; color:var(--ink-faint); font-weight:400; font-family: var(--font-body);">— mini</em></div><p class="menu-item-desc">Roquette, burrata, basilic, tomate séchée.</p></div><div class="menu-item-price">8,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Burrata Parmigiana <span class="badge badge-veggie">Veggie</span> <em style="font-size:0.8rem; color:var(--ink-faint); font-weight:400; font-family: var(--font-body);">— mini</em></div><p class="menu-item-desc">Aubergines frites, burrata, tomates séchées, basilic.</p></div><div class="menu-item-price">9,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Salade Italienne</div><p class="menu-item-desc">Roquette, burrata, légumes du moment, jambon cru, basilic.</p></div><div class="menu-item-price">14,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Focaccia fraîche <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Une fois par semaine.</p></div><div class="menu-item-price">3,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Burrata <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Roquette, pesto genovese, pignons.</p></div><div class="menu-item-price">7,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Burrata Parmigiana <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Sauce tomate, aubergines, burrata, basilou, copeaux de grana.</p></div><div class="menu-item-price">8,90 €</div></div>
           </div>
 
           <!-- Desserts -->
           <div class="menu-category reveal" id="desserts">
             <div class="menu-category-head"><h2>Desserts</h2><span class="menu-cat-note">pour finir en douceur</span></div>
 
-            <div class="menu-item"><div><div class="menu-item-name">Tiramisu <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Tiramisu du moment, recette maison.</p></div><div class="menu-item-price">4,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Piccola Nutella <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Petite pizza au mascarpone, nutella, éclats de noisettes.</p></div><div class="menu-item-price">12,90 €</div></div>
-
-            <div class="menu-item"><div><div class="menu-item-name">Zeppoline <span class="badge badge-veggie">Veggie</span></div><p class="menu-item-desc">Beignets de pâte à pizza frits, sucre, avec topping au choix : nutella, noisette ou pistache.</p></div><div class="menu-item-price">9,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Tiramisu</div><p class="menu-item-desc">Goût du jour.</p></div><div class="menu-item-price">4,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Piccola</div><p class="menu-item-desc">Petite pizza remplie de douceur : mascarpone au Nutella, à la crème de marron ou à la noisette (1 au choix).</p></div><div class="menu-item-price">12,90 €</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Zeppoline</div><p class="menu-item-desc">Beignets de pâte à pizza frits, presque mieux qu'un churros. Garniture au choix : Nutella, pistache, noisette, crème de marron, chocolat ou caramel.</p></div><div class="menu-item-price">Au sucre 9,90 € · Garnie 11,90 €</div></div>
           </div>
 
           <!-- Suppléments -->
           <div class="supplements reveal" data-content="supplements">
             <span class="eyebrow">Suppléments</span>
             <span><strong>Burrata</strong> 5 €</span>
-            <span><strong>Légumes</strong> 1,90 €</span>
-            <span><strong>Fromage</strong> 2,90 €</span>
-            <span><strong>Charcuteries / viandes</strong> 3,90 €</span>
-            <span><strong>Œuf</strong> 1,50 €</span>
-            <span><strong>Salade</strong> 3,50 €</span>
+            <span><strong>Légumes</strong> 2,90 €</span>
+            <span><strong>Fromages</strong> 3,90 €</span>
+            <span><strong>Charcuterie ou viande</strong> 4,90 €</span>
           </div>
         </div>
       </div>
